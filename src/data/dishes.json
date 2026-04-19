@@ -1,0 +1,92 @@
+[
+  {
+    "id": "dish-1",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Jamón Serrano",
+      "ca": "Entrepà de Pernil Serrano",
+      "en": "Serrano Ham Sandwich"
+    },
+    "description": {
+      "es": "Pan crujiente con jamón serrano ibérico, tomate y aceite de oliva",
+      "ca": "Pa cruixent amb pernil serrano ibèric, tomàquet i oli d'oliva",
+      "en": "Crispy bread with Iberian serrano ham, tomato and olive oil"
+    },
+    "price": 7.9,
+    "allergens": ["gluten"],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-2",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Tortilla",
+      "ca": "Entrepà de Truita",
+      "en": "Spanish Omelette Sandwich"
+    },
+    "description": {
+      "es": "Tortilla española casera con cebolla",
+      "ca": "Truita espanyola casolana amb ceba",
+      "en": "Homemade Spanish omelette with onion"
+    },
+    "price": 6.5,
+    "allergens": ["gluten", "eggs"],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-3",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Ensalada César",
+      "ca": "Amanida Cèsar",
+      "en": "Caesar Salad"
+    },
+    "description": {
+      "es": "Lechuga romana, pollo a la parrilla, parmesano, crutones y salsa césar",
+      "ca": "Enciam romaní, pollastre a la graella, parmesà, croutons i salsa césar",
+      "en": "Romaine lettuce, grilled chicken, parmesan, croutons and caesar dressing"
+    },
+    "price": 9.9,
+    "allergens": ["gluten", "lactose", "eggs"],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-4",
+    "categoryId": "cat-3",
+    "name": {
+      "es": "Paella Valenciana",
+      "ca": "Paella Valenciana",
+      "en": "Valencian Paella"
+    },
+    "description": {
+      "es": "Arroz con pollo, conejo, judías verdes y garrofón",
+      "ca": "Arròs amb pollastre, conill, mongetes verdes i garrofó",
+      "en": "Rice with chicken, rabbit, green beans and butter beans"
+    },
+    "price": 15.9,
+    "allergens": [],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-5",
+    "categoryId": "cat-4",
+    "name": {
+      "es": "Crema Catalana",
+      "ca": "Crema Catalana",
+      "en": "Catalan Cream"
+    },
+    "description": {
+      "es": "Postre tradicional catalán con capa de azúcar caramelizada",
+      "ca": "Postre tradicional català amb capa de sucre caramel·litzat",
+      "en": "Traditional Catalan dessert with caramelized sugar topping"
+    },
+    "price": 4.5,
+    "allergens": ["lactose", "eggs"],
+    "active": true,
+    "order": 1
+  }
+]

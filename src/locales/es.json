@@ -1,0 +1,50 @@
+{
+  "header": {
+    "menu": "Menú",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "PREMIUM Menu Recipine",
+    "subtitle": "Sabores tradicionales de Barcelona"
+  },
+  "search": {
+    "placeholder": "Buscar categoría o plato...",
+    "noResults": "Sin resultados",
+    "results": "Resultados"
+  },
+  "categories": {
+    "title": "Nuestras Categorías",
+    "subtitle": "Descubre nuestra selección"
+  },
+  "category": {
+    "back": "← Volver al menú",
+    "dishes": "Platos",
+    "empty": "No hay platos disponibles en esta categoría",
+    "breadcrumbHome": "Inicio"
+  },
+  "dish": {
+    "allergens": "Alérgenos",
+    "viewDetails": "Ver detalles"
+  },
+  "allergens": {
+    "gluten": "Gluten",
+    "lactose": "Lactosa",
+    "nuts": "Frutos secos",
+    "seafood": "Marisco",
+    "eggs": "Huevos"
+  },
+  "actions": {
+    "whatsapp": "Contactar por WhatsApp",
+    "location": "Ver ubicación",
+    "favorite": "Añadir a favoritos",
+    "close": "Cerrar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe.",
+    "back": "Volver al inicio"
+  }
+}
