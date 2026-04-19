@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cat-1",
+    "name": { "es": "Bocadillos", "ca": "Entrepans", "en": "Sandwiches" },
+    "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=800",
+    "order": 1,
+    "active": true
+  },
+  {
+    "id": "cat-2",
+    "name": { "es": "Ensaladas", "ca": "Amanides", "en": "Salads" },
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+    "order": 2,
+    "active": true
+  },
+  {
+    "id": "cat-3",
+    "name": { "es": "Platos Principales", "ca": "Plats Principals", "en": "Main Courses" },
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "order": 3,
+    "active": true
+  },
+  {
+    "id": "cat-4",
+    "name": { "es": "Postres", "ca": "Postres", "en": "Desserts" },
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+    "order": 4,
+    "active": true
+  }
+]

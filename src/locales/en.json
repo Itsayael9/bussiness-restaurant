@@ -1,0 +1,50 @@
+{
+  "header": {
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "PREMIUM Menu Recipine",
+    "subtitle": "Traditional flavors from Barcelona"
+  },
+  "search": {
+    "placeholder": "Search category or dish...",
+    "noResults": "No results",
+    "results": "Results"
+  },
+  "categories": {
+    "title": "Our Categories",
+    "subtitle": "Discover our selection"
+  },
+  "category": {
+    "back": "← Back to menu",
+    "dishes": "Dishes",
+    "empty": "No dishes available in this category",
+    "breadcrumbHome": "Home"
+  },
+  "dish": {
+    "allergens": "Allergens",
+    "viewDetails": "View details"
+  },
+  "allergens": {
+    "gluten": "Gluten",
+    "lactose": "Lactose",
+    "nuts": "Nuts",
+    "seafood": "Seafood",
+    "eggs": "Eggs"
+  },
+  "actions": {
+    "whatsapp": "Contact via WhatsApp",
+    "location": "View location",
+    "favorite": "Add to favorites",
+    "close": "Close"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist.",
+    "back": "Back to home"
+  }
+}

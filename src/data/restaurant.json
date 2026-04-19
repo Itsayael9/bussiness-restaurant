@@ -1,0 +1,10 @@
+{
+  "name": "Restaurant Bussines",
+  "address": "Carrer de Example, 123, Barcelona",
+  "phone": "+34 123 456 789",
+  "whatsapp": "+34123456789",
+  "coordinates": {
+    "lat": 41.3851,
+    "lng": 2.1734
+  }
+}
