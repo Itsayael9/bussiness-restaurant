@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "next-themes";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as HotToaster } from "react-hot-toast";
@@ -14,6 +15,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <LanguageProvider>
       <TooltipProvider>
         <Toaster />
@@ -29,6 +31,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </LanguageProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
