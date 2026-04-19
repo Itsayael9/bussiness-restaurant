@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
+import ThemeToggle from "@/components/shared/ThemeToggle";
 import SearchBar from "./SearchBar";
 import restaurant from "@/data/restaurant.json";
 
@@ -38,6 +39,9 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-2">
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
             <div className="hidden sm:block">
               <LanguageSwitcher />
             </div>
@@ -84,8 +88,9 @@ const Header = () => {
               </div>
               <div className="p-5 space-y-4">
                 <SearchBar variant="header" />
-                <div className="pt-2">
+                <div className="pt-2 flex items-center gap-3">
                   <LanguageSwitcher />
+                  <ThemeToggle />
                 </div>
               </div>
             </motion.aside>
