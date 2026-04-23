@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage, type Lang } from "@/contexts/LanguageContext";
 
-const LANGS: { code: Lang; flag: string; label: string }[] = [
-  { code: "es", flag: "🇪🇸", label: "ES" },
-  { code: "ca", flag: "🏴", label: "CAT" },
-  { code: "en", flag: "🇬🇧", label: "EN" },
+const LANGS: { code: Lang; flag: string; label: string; alt: string }[] = [
+  { code: "es", flag: "/images/flags/es.svg", label: "ES", alt: "Spain flag" },
+  { code: "ca", flag: "/images/flags/ca.svg", label: "CAT", alt: "Catalonia flag" },
+  { code: "en", flag: "/images/flags/us.svg", label: "EN", alt: "United States flag" },
 ];
 
 const LanguageSwitcher = ({ compact = false }: { compact?: boolean }) => {
@@ -30,7 +30,7 @@ const LanguageSwitcher = ({ compact = false }: { compact?: boolean }) => {
         aria-expanded={open}
         className="flex items-center gap-2 px-3 py-2 rounded-full border border-border hover:border-gold transition-smooth bg-background min-h-[44px]"
       >
-        <span className="text-lg leading-none">{current.flag}</span>
+        <img src={current.flag} alt={current.alt} className="w-6 h-4 rounded-sm object-cover shadow-sm" />
         <span className="text-sm font-medium tracking-wide">{current.label}</span>
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
@@ -47,7 +47,7 @@ const LanguageSwitcher = ({ compact = false }: { compact?: boolean }) => {
                 l.code === lang ? "text-gold font-semibold" : "text-foreground"
               }`}
             >
-              <span className="text-lg">{l.flag}</span>
+              <img src={l.flag} alt={l.alt} className="w-6 h-4 rounded-sm object-cover shadow-sm" />
               <span>{l.label}</span>
             </button>
           ))}

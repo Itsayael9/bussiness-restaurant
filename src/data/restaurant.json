@@ -1,10 +1,50 @@
 {
-  "name": "Restaurant Bussines",
-  "address": "Carrer de Example, 123, Barcelona",
-  "phone": "+34 123 456 789",
-  "whatsapp": "+34123456789",
+  "name": "Restaurant Business",
+  "address": "Carrer de Copèrnic, 94, 08006 Barcelona",
+  "phone": "+34 602 50 68 05",
+  "whatsapp": "+34 602 50 68 05",
   "coordinates": {
-    "lat": 41.3851,
-    "lng": 2.1734
+    "lat": 41.4025297,
+    "lng": 2.144222
+  },
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restaurant+Business%2C+Carrer+de+Cop%C3%A8rnic+94%2C+08006+Barcelona",
+  "openingHours": {
+    "weekly": [
+      {
+        "day": "monday",
+        "from": "07:00",
+        "to": "23:30"
+      },
+      {
+        "day": "tuesday",
+        "from": "07:00",
+        "to": "23:30"
+      },
+      {
+        "day": "wednesday",
+        "from": "07:00",
+        "to": "23:30"
+      },
+      {
+        "day": "thursday",
+        "from": "07:00",
+        "to": "23:30"
+      },
+      {
+        "day": "friday",
+        "from": "07:00",
+        "to": "23:30"
+      },
+      {
+        "day": "saturday",
+        "from": "08:00",
+        "to": "00:00"
+      },
+      {
+        "day": "sunday",
+        "from": "08:00",
+        "to": "00:00"
+      }
+    ]
   }
 }

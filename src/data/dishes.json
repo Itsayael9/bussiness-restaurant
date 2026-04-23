@@ -13,8 +13,10 @@
       "en": "Crispy bread with Iberian serrano ham, tomato and olive oil"
     },
     "price": 7.9,
-    "allergens": ["gluten"],
-    "active": true,
+    "allergens": [
+      "gluten"
+    ],
+    "active": false,
     "order": 1
   },
   {
@@ -31,8 +33,11 @@
       "en": "Homemade Spanish omelette with onion"
     },
     "price": 6.5,
-    "allergens": ["gluten", "eggs"],
-    "active": true,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "active": false,
     "order": 2
   },
   {
@@ -49,8 +54,12 @@
       "en": "Romaine lettuce, grilled chicken, parmesan, croutons and caesar dressing"
     },
     "price": 9.9,
-    "allergens": ["gluten", "lactose", "eggs"],
-    "active": true,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": false,
     "order": 1
   },
   {
@@ -68,12 +77,12 @@
     },
     "price": 15.9,
     "allergens": [],
-    "active": true,
+    "active": false,
     "order": 1
   },
   {
     "id": "dish-5",
-    "categoryId": "cat-4",
+    "categoryId": "cat-12",
     "name": {
       "es": "Crema Catalana",
       "ca": "Crema Catalana",
@@ -85,8 +94,2261 @@
       "en": "Traditional Catalan dessert with caramelized sugar topping"
     },
     "price": 4.5,
-    "allergens": ["lactose", "eggs"],
+    "allergens": [
+      "lactose",
+      "eggs"
+    ],
+    "active": false,
+    "order": 1
+  },
+  {
+    "id": "dish-6",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Bravas caseras Business",
+      "ca": "Braves casolanes Business",
+      "en": "Homemade patatas bravas"
+    },
+    "description": {
+      "es": "Patatas con salsa brava y alioli, receta casera",
+      "ca": "Patates amb salsa brava i allioli, recepta casolana",
+      "en": "Fried potatoes with spicy brava sauce and garlic aioli"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
     "active": true,
     "order": 1
+  },
+  {
+    "id": "dish-7",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Buñuelos de Bacalao",
+      "ca": "Bunyols de Bacallà",
+      "en": "Salt cod fritters"
+    },
+    "description": {
+      "es": "Crujientes buñuelos de bacalao desmigado",
+      "ca": "Bunyols cruixents de bacallà esmicolat",
+      "en": "Crispy fritters of shredded salt cod"
+    },
+    "price": 9.5,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-8",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Pulpo a la Feira",
+      "ca": "Pop a la feira",
+      "en": "Galician-style octopus"
+    },
+    "description": {
+      "es": "Pulpo cocido con pimentón, aceite de oliva y sal gorda",
+      "ca": "Pop bullit amb pebre vermell, oli d'oliva i sal gruixuda",
+      "en": "Tender octopus with paprika, olive oil and coarse salt"
+    },
+    "price": 19.5,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-9",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Lacón a la Gallega",
+      "ca": "Llacó a la gallega",
+      "en": "Galician-style cured pork shoulder"
+    },
+    "description": {
+      "es": "Lacón cocido servido con cachelos y pimentón",
+      "ca": "Llacó bullit servit amb patates i pebre vermell",
+      "en": "Boiled pork shoulder with potatoes and paprika"
+    },
+    "price": 13.95,
+    "allergens": [],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-10",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Croquetas de Jamón Caseras (Ud.)",
+      "ca": "Croquetes de Pernil casolanes (u.)",
+      "en": "Homemade ham croquettes (ea.)"
+    },
+    "description": {
+      "es": "Croquetas cremosas de jamón, elaboración casera",
+      "ca": "Croquetes cremoses de pernil, elaboració casolana",
+      "en": "Creamy ham croquettes, homemade"
+    },
+    "price": 1.95,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-11",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Chorisitos y Chistorra al Vino",
+      "ca": "Xorisets i xistorra al vi",
+      "en": "Little chorizo and chistorra in wine"
+    },
+    "description": {
+      "es": "Embutidos salteados al vino tinto",
+      "ca": "Embotits saltats al vi negre",
+      "en": "Sausages sautéed in red wine"
+    },
+    "price": 6.95,
+    "allergens": [],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-12",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Gyozas Japonesas de Gambas con soja",
+      "ca": "Gyozes japoneses de Gambes amb soja",
+      "en": "Japanese prawn gyoza with soy"
+    },
+    "description": {
+      "es": "Gyozas rellenas de gamba, servidas con salsa de soja",
+      "ca": "Gyozes farcides de gamba, servides amb salsa de soja",
+      "en": "Prawn-filled dumplings with soy dipping sauce"
+    },
+    "price": 12.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-13",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Pinchos Morunos de Ternera",
+      "ca": "Broquetes morunes de Vedella",
+      "en": "Beef Moorish skewers"
+    },
+    "description": {
+      "es": "Brocheta de ternera marinada con especias",
+      "ca": "Broqueta de vedella marinada amb espècies",
+      "en": "Skewer of beef marinated with spices"
+    },
+    "price": 9.95,
+    "allergens": [],
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "dish-14",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Pincho de Pollo al Limón",
+      "ca": "Broqueta de Pollastre al Llimona",
+      "en": "Lemon chicken skewer"
+    },
+    "description": {
+      "es": "Pollo a la parrilla con toque cítrico",
+      "ca": "Pollastre a la graella amb toc cítric",
+      "en": "Grilled chicken with a citrus glaze"
+    },
+    "price": 9.5,
+    "allergens": [],
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "dish-15",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Fingers de Pechuga de Pollo",
+      "ca": "Fingers de Pit de Pollastre",
+      "en": "Chicken breast fingers"
+    },
+    "description": {
+      "es": "Tiras de pechuga empanadas y fritas",
+      "ca": "Tires de pit empanades i fregides",
+      "en": "Breaded and fried chicken breast strips"
+    },
+    "price": 9.95,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "dish-16",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Gambas a la Plancha",
+      "ca": "Gambes a la Plancha",
+      "en": "Grilled prawns"
+    },
+    "description": {
+      "es": "Gambas frescas a la plancha con ajo y perejil",
+      "ca": "Gambes fresques a la planxa amb all i julivert",
+      "en": "Fresh prawns grilled with garlic and parsley"
+    },
+    "price": 14.95,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "dish-17",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Calamares a la Romana",
+      "ca": "Calamars a la Romana",
+      "en": "Fried calamari"
+    },
+    "description": {
+      "es": "Anillas de calamar rebozadas y fritas",
+      "ca": "Anelles de calamars empanades i fregides",
+      "en": "Crispy battered squid rings"
+    },
+    "price": 9.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "dish-18",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Rabas de Calamares Caseros",
+      "ca": "Rabes de Calamars casolanes",
+      "en": "Homemade squid strips"
+    },
+    "description": {
+      "es": "Tiras de calamar caseras, crujientes por fuera",
+      "ca": "Tires de calamars casolanes, cruixents per fora",
+      "en": "Homemade squid strips, crisp outside"
+    },
+    "price": 9.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "dish-19",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Pimientos del Padrón",
+      "ca": "Pebrots del Padró",
+      "en": "Padrón peppers"
+    },
+    "description": {
+      "es": "Pimientos verdes fritos con sal gruesa",
+      "ca": "Pebrots verds fregits amb sal gruixuda",
+      "en": "Blistered green peppers with coarse salt"
+    },
+    "price": 4.95,
+    "allergens": [],
+    "active": true,
+    "order": 14
+  },
+  {
+    "id": "dish-20",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Pincho de Tortilla de Patatas o Verdura",
+      "ca": "Broqueta de Truita de Patates o Verdura",
+      "en": "Potato or vegetable Spanish omelette skewer"
+    },
+    "description": {
+      "es": "Porción de tortilla casera al gusto",
+      "ca": "Porció de truita casolana al gust",
+      "en": "Wedge of homemade omelette, potato or veg"
+    },
+    "price": 5.95,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 15
+  },
+  {
+    "id": "dish-21",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Empanada de Pollo o Carne Caseras (Ud.)",
+      "ca": "Empanada de Pollastre o Carn casolanes (u.)",
+      "en": "Homemade chicken or meat empanada (ea.)"
+    },
+    "description": {
+      "es": "Empanada gallega rellena, elaboración casera",
+      "ca": "Empanada gallega farcida, elaboració casolana",
+      "en": "Galician-style filled pastry, homemade"
+    },
+    "price": 3.25,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "active": true,
+    "order": 16
+  },
+  {
+    "id": "dish-22",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Huevos Estrellados con Jamón",
+      "ca": "Ous estrellats amb Pernil",
+      "en": "Fried eggs with ham"
+    },
+    "description": {
+      "es": "Huevos fritos con jamón ibérico y patatas",
+      "ca": "Ous fregits amb pernil ibèric i patates",
+      "en": "Fried eggs with Iberian ham and potatoes"
+    },
+    "price": 12,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 17
+  },
+  {
+    "id": "dish-23",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Huevos Estrellados con Chorizo",
+      "ca": "Ous estrellats amb Xoriço",
+      "en": "Fried eggs with chorizo"
+    },
+    "description": {
+      "es": "Huevos fritos con chorizo y patatas",
+      "ca": "Ous fregits amb xoriço i patates",
+      "en": "Fried eggs with chorizo and potatoes"
+    },
+    "price": 11.5,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 18
+  },
+  {
+    "id": "dish-24",
+    "categoryId": "cat-5",
+    "name": {
+      "es": "Huevos Estrellados con Bacon",
+      "ca": "Ous estrellats amb Cansalada viada",
+      "en": "Fried eggs with bacon"
+    },
+    "description": {
+      "es": "Huevos fritos con bacon crujiente y patatas",
+      "ca": "Ous fregits amb cansalada viada cruixent i patates",
+      "en": "Fried eggs with crispy bacon and potatoes"
+    },
+    "price": 11.5,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 19
+  },
+  {
+    "id": "dish-25",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Tabla de Quesos",
+      "ca": "Taula de Formatges",
+      "en": "Cheese board"
+    },
+    "description": {
+      "es": "Selección de quesos nacionales",
+      "ca": "Selecció de formatges nacionals",
+      "en": "Selection of Spanish cheeses"
+    },
+    "price": 15.5,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-26",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Tabla de Embutidos",
+      "ca": "Taula d'Embotits",
+      "en": "Cured meats board"
+    },
+    "description": {
+      "es": "Surtido de embutidos ibéricos",
+      "ca": "Assortiment d'embotits ibèrics",
+      "en": "Assorted Iberian cold cuts"
+    },
+    "price": 15.5,
+    "allergens": [],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-27",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Plato de Jamón",
+      "ca": "Plat de Pernil",
+      "en": "Ham plate"
+    },
+    "description": {
+      "es": "Ración de jamón ibérico cortado a cuchillo",
+      "ca": "Ració de pernil ibèric tallat a ganivet",
+      "en": "Hand-carved Iberian ham"
+    },
+    "price": 15.95,
+    "allergens": [],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-28",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Queso Manchego con Salsa de Mermelada",
+      "ca": "Formatge Manchego amb Salsa de Melmelada",
+      "en": "Manchego cheese with jam sauce"
+    },
+    "description": {
+      "es": "Queso curado manchego acompañado de mermelada",
+      "ca": "Formatge curat manxec acompanyat de melmelada",
+      "en": "Aged Manchego with fruit jam"
+    },
+    "price": 7.95,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-29",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Ensalada Rusa Casera con Jamón Ibérico",
+      "ca": "Amanida Russa casolana amb Pernil Ibèric",
+      "en": "Homemade Russian salad with Iberian ham"
+    },
+    "description": {
+      "es": "Ensaladilla rusa tradicional con taquitos de jamón",
+      "ca": "Amanida russa tradicional amb daus de pernil",
+      "en": "Classic potato salad with diced Iberian ham"
+    },
+    "price": 6.95,
+    "allergens": [
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-30",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Berberechos",
+      "ca": "Berberets",
+      "en": "Cockles"
+    },
+    "description": {
+      "es": "Berberechos al vapor o al natural",
+      "ca": "Berberets al vapor o al natural",
+      "en": "Steamed or natural cockles"
+    },
+    "price": 6.5,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-31",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Boquerones en Vinagre",
+      "ca": "Boquerons en Vinagre",
+      "en": "Anchovies in vinegar"
+    },
+    "description": {
+      "es": "Boquerones frescos marinados en vinagre y ajo",
+      "ca": "Boquerons frescos marinats en vinagre i all",
+      "en": "Fresh anchovies marinated in vinegar and garlic"
+    },
+    "price": 5.95,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-32",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Olivas Rellenas de Anchoa",
+      "ca": "Olives Farcides d'Anxova",
+      "en": "Anchovy-stuffed olives"
+    },
+    "description": {
+      "es": "Aceitunas rellenas de anchoa del Cantábrico",
+      "ca": "Olives farcides d'anxova del Cantàbric",
+      "en": "Olives stuffed with Cantabrian anchovy"
+    },
+    "price": 3.5,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "dish-33",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Cóctel de Olivas",
+      "ca": "Còctel d'Olives",
+      "en": "Olive cocktail"
+    },
+    "description": {
+      "es": "Mezcla de aceitunas variadas",
+      "ca": "Barreja d'olives variades",
+      "en": "Mixed marinated olives"
+    },
+    "price": 2.95,
+    "allergens": [],
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "dish-34",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Anchoas",
+      "ca": "Anxoves",
+      "en": "Anchovies"
+    },
+    "description": {
+      "es": "Filetes de anchoa del Cantábrico en aceite",
+      "ca": "Filets d'anxova del Cantàbric en oli",
+      "en": "Cantabrian anchovy fillets in olive oil"
+    },
+    "price": 5.95,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "dish-35",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Patatas Chips",
+      "ca": "Patates Xips",
+      "en": "Potato crisps"
+    },
+    "description": {
+      "es": "Patatas fritas en láminas crujientes",
+      "ca": "Patates fregides en làmines cruixents",
+      "en": "Crispy thin-cut fried potatoes"
+    },
+    "price": 2.5,
+    "allergens": [],
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "dish-36",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Hummus de Tahina",
+      "ca": "Hummus de Tahina",
+      "en": "Tahini hummus"
+    },
+    "description": {
+      "es": "Crema de garbanzos con tahina y especias",
+      "ca": "Crema de cigrons amb tahina i espècies",
+      "en": "Chickpea dip with tahini and spices"
+    },
+    "price": 8.95,
+    "allergens": [],
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "dish-37",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Nachos con Guacamole",
+      "ca": "Nachos amb Guacamole",
+      "en": "Nachos with guacamole"
+    },
+    "description": {
+      "es": "Totopos con guacamole fresco y tomate",
+      "ca": "Totopos amb guacamole fresc i tomàquet",
+      "en": "Tortilla chips with fresh guacamole"
+    },
+    "price": 11.95,
+    "allergens": [],
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "dish-38",
+    "categoryId": "cat-6",
+    "name": {
+      "es": "Almendras",
+      "ca": "Ametlles",
+      "en": "Almonds"
+    },
+    "description": {
+      "es": "Almendras tostadas con sal",
+      "ca": "Ametlles torrades amb sal",
+      "en": "Toasted salted almonds"
+    },
+    "price": 3.95,
+    "allergens": [
+      "nuts"
+    ],
+    "active": true,
+    "order": 14
+  },
+  {
+    "id": "dish-39",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Vegetal de Atún",
+      "ca": "Vegetal de Tonyina",
+      "en": "Tuna salad sandwich"
+    },
+    "description": {
+      "es": "Bocadillo frío con atún y verduras",
+      "ca": "Entrepà fred amb tonyina i verdures",
+      "en": "Cold sandwich with tuna and vegetables"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-40",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Atún",
+      "ca": "Entrepà de Tonyina",
+      "en": "Tuna sandwich"
+    },
+    "description": {
+      "es": "Pan con atún y aliño al gusto",
+      "ca": "Pa amb tonyina i ali al gust",
+      "en": "Bread with tuna and dressing"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-41",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Jamón Serrano",
+      "ca": "Entrepà de Pernil Serrano",
+      "en": "Serrano ham sandwich"
+    },
+    "description": {
+      "es": "Pan con jamón serrano",
+      "ca": "Pa amb pernil serrano",
+      "en": "Bread with serrano ham"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-42",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Queso Manchego",
+      "ca": "Entrepà de Formatge Manchego",
+      "en": "Manchego cheese sandwich"
+    },
+    "description": {
+      "es": "Pan con queso manchego curado",
+      "ca": "Pa amb formatge manxec curat",
+      "en": "Bread with aged Manchego cheese"
+    },
+    "price": 5.25,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-43",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Anchoas con Queso",
+      "ca": "Entrepà d'Anxoves amb Formatge",
+      "en": "Anchovy and cheese sandwich"
+    },
+    "description": {
+      "es": "Anchoas del Cantábrico con queso fundido",
+      "ca": "Anxoves del Cantàbric amb formatge fos",
+      "en": "Cantabrian anchovies with melted cheese"
+    },
+    "price": 6.5,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "lactose"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-44",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Jamón Dulce",
+      "ca": "Entrepà de Pernil Dolç",
+      "en": "Cooked ham sandwich"
+    },
+    "description": {
+      "es": "Pan con jamón cocido york",
+      "ca": "Pa amb pernil dolç",
+      "en": "Bread with mild cooked ham"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-45",
+    "categoryId": "cat-7",
+    "name": {
+      "es": "Bocadillo de Jamón Dulce con Queso",
+      "ca": "Entrepà de Pernil Dolç amb Formatge",
+      "en": "Cooked ham and cheese sandwich"
+    },
+    "description": {
+      "es": "Jamón cocido con queso fundido",
+      "ca": "Pernil dolç amb formatge fos",
+      "en": "Cooked ham with melted cheese"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-46",
+    "categoryId": "cat-8",
+    "name": {
+      "es": "Bocadillo de Chorizo",
+      "ca": "Entrepà de Xoriço",
+      "en": "Chorizo sandwich"
+    },
+    "description": {
+      "es": "Pan con chorizo ibérico",
+      "ca": "Pa amb xoriço ibèric",
+      "en": "Bread with Iberian chorizo"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-47",
+    "categoryId": "cat-8",
+    "name": {
+      "es": "Bocadillo de Salchichón",
+      "ca": "Entrepà de Salsitxa",
+      "en": "Salchichón sandwich"
+    },
+    "description": {
+      "es": "Pan con salchichón curado",
+      "ca": "Pa amb salsitxa curada",
+      "en": "Bread with cured salchichón"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-48",
+    "categoryId": "cat-8",
+    "name": {
+      "es": "Bocadillo de Fuet",
+      "ca": "Entrepà de Fuet",
+      "en": "Fuet sandwich"
+    },
+    "description": {
+      "es": "Pan con fuet catalán",
+      "ca": "Pa amb fuet català",
+      "en": "Bread with Catalan fuet sausage"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-49",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Pincho de Pollo",
+      "ca": "Entrepà de Broqueta de Pollastre",
+      "en": "Chicken skewer sandwich"
+    },
+    "description": {
+      "es": "Bocadillo caliente con pincho de pollo a la parrilla",
+      "ca": "Entrepà calent amb broqueta de pollastre a la graella",
+      "en": "Hot sandwich with grilled chicken skewer"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-50",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Pincho de Ternera",
+      "ca": "Entrepà de Broqueta de Vedella",
+      "en": "Beef skewer sandwich"
+    },
+    "description": {
+      "es": "Bocadillo con pincho moruno de ternera",
+      "ca": "Entrepà amb broqueta moruna de vedella",
+      "en": "Sandwich with beef Moorish skewer"
+    },
+    "price": 6.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-51",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Pepito de Ternera",
+      "ca": "Entrepà de Pepito de Vedella",
+      "en": "Beef pepito sandwich"
+    },
+    "description": {
+      "es": "Ternera tierna en pan con el toque clásico del pepito",
+      "ca": "Vedella tendra en pa amb el toc clàssic del pepito",
+      "en": "Tender beef in bread, classic pepito style"
+    },
+    "price": 6.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-52",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Tortilla Francesa con Queso",
+      "ca": "Entrepà de Truita Francesa amb Formatge",
+      "en": "French omelette and cheese sandwich"
+    },
+    "description": {
+      "es": "Tortilla francesa recién hecha con queso fundido",
+      "ca": "Truita francesa acabada de fer amb formatge fos",
+      "en": "Fresh French-style omelette with melted cheese"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-53",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo Frankfurt",
+      "ca": "Entrepà Frankfurt",
+      "en": "Frankfurter sandwich"
+    },
+    "description": {
+      "es": "Salchicha Frankfurt en pan caliente",
+      "ca": "Salsitxa Frankfurt en pa calent",
+      "en": "Hot frankfurter sausage in a roll"
+    },
+    "price": 4.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-54",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Salchichas del País",
+      "ca": "Entrepà de Salsitxes del País",
+      "en": "Country sausages sandwich"
+    },
+    "description": {
+      "es": "Salchichas del país servidas en bocadillo caliente",
+      "ca": "Salsitxes del país servides en entrepà calent",
+      "en": "Local-style sausages in a hot sandwich"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-55",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Tortilla de Patatas",
+      "ca": "Entrepà de Truita de Patates",
+      "en": "Spanish potato omelette sandwich"
+    },
+    "description": {
+      "es": "Clásica tortilla de patatas en pan",
+      "ca": "Truita clàssica de patates en pa",
+      "en": "Classic potato omelette in bread"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-56",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bikini de Jamón Dulce y Queso",
+      "ca": "Bikini de Pernil Dolç i Formatge",
+      "en": "Ham and cheese toasted sandwich"
+    },
+    "description": {
+      "es": "Pan de molde tostado con jamón cocido y queso",
+      "ca": "Pa de motlle torrat amb pernil dolç i formatge",
+      "en": "Toasted white bread with cooked ham and cheese"
+    },
+    "price": 4.5,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "dish-57",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Bacon con Queso",
+      "ca": "Entrepà de Cansalada Viada amb Formatge",
+      "en": "Bacon and cheese sandwich"
+    },
+    "description": {
+      "es": "Bacon crujiente con queso fundido",
+      "ca": "Cansalada viada cruixent amb formatge fos",
+      "en": "Crispy bacon with melted cheese"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "dish-58",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Lomo con Queso",
+      "ca": "Entrepà de Lomo amb Formatge",
+      "en": "Pork loin and cheese sandwich"
+    },
+    "description": {
+      "es": "Lomo de cerdo con queso en pan caliente",
+      "ca": "Lomo de porc amb formatge en pa calent",
+      "en": "Pork loin with cheese in a hot roll"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "dish-59",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Sobrasada con Queso",
+      "ca": "Entrepà de Sobrassada amb Formatge",
+      "en": "Sobrasada and cheese sandwich"
+    },
+    "description": {
+      "es": "Sobrasada mallorquina con queso fundido",
+      "ca": "Sobrassada mallorquina amb formatge fos",
+      "en": "Mallorcan sobrasada spread with melted cheese"
+    },
+    "price": 5.95,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "dish-60",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Calamares con Alioli",
+      "ca": "Entrepà de Calamars amb Alioli",
+      "en": "Fried squid sandwich with aioli"
+    },
+    "description": {
+      "es": "Calamares a la romana con alioli casero",
+      "ca": "Calamars a la romana amb allioli casolà",
+      "en": "Fried squid rings with homemade aioli"
+    },
+    "price": 7.5,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "dish-61",
+    "categoryId": "cat-1",
+    "name": {
+      "es": "Bocadillo de Serranito",
+      "ca": "Entrepà de Serranito",
+      "en": "Serranito sandwich"
+    },
+    "description": {
+      "es": "Lomo, pimientos, jamón y tomate: el clásico andaluz",
+      "ca": "Lomo, pebrots, pernil i tomàquet: el clàssic andalús",
+      "en": "Loin, peppers, ham and tomato — the Andalusian classic"
+    },
+    "price": 7.95,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "dish-62",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Bistec con Patatas Fritas, Huevo Frito y ensalada",
+      "ca": "Bistec amb Patates Fregides, Ou Ferrat i amanida",
+      "en": "Steak with chips, fried egg and salad"
+    },
+    "description": {
+      "es": "Plato completo con bistec a la plancha",
+      "ca": "Plat complet amb bistec a la planxa",
+      "en": "Full plate with grilled steak"
+    },
+    "price": 14.5,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-63",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Dos Libritos de Lomo, Huevo y Patatas",
+      "ca": "Dos Llibrets de Lomo, Ou i Patates",
+      "en": "Two breaded pork fillets with egg and potatoes"
+    },
+    "description": {
+      "es": "Libritos empanados con huevo y guarnición",
+      "ca": "Llibrets empanats amb ou i guarnició",
+      "en": "Breaded pork fillets with egg and sides"
+    },
+    "price": 15.5,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-64",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Hamburguesa con Bacon, Huevos y Patatas Fritas",
+      "ca": "Hamburguesa amb Cansalada Viada, Ous i Patates Fregides",
+      "en": "Burger with bacon, eggs and chips"
+    },
+    "description": {
+      "es": "Hamburguesa casera con bacon, huevos fritos y patatas",
+      "ca": "Hamburguesa casolana amb cansalada viada, ous fregits i patates",
+      "en": "Homestyle burger with bacon, fried eggs and fries"
+    },
+    "price": 13.95,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-65",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Pechuga de Pollo con Patatas Fritas, Huevos y Pimiento del Padrón",
+      "ca": "Pit de Pollastre amb Patates Fregides, Ous i Pebrot del Padró",
+      "en": "Chicken breast with chips, eggs and Padrón peppers"
+    },
+    "description": {
+      "es": "Pechuga a la plancha con guarnición completa",
+      "ca": "Pit a la planxa amb guarnició completa",
+      "en": "Grilled chicken breast with full sides"
+    },
+    "price": 13.95,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-66",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Tortilla de Patatas con tres Croquetas y Ensalada",
+      "ca": "Truita de Patates amb tres Croquetes i Amanida",
+      "en": "Potato omelette with three croquettes and salad"
+    },
+    "description": {
+      "es": "Ración de tortilla casera con croquetas y ensalada mixta",
+      "ca": "Ració de truita casolana amb croquetes i amanida mixta",
+      "en": "Homemade potato omelette with croquettes and mixed salad"
+    },
+    "price": 13.95,
+    "allergens": [
+      "eggs",
+      "lactose",
+      "gluten"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-67",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Butifarra con Mongetes y Pimiento del Padrón",
+      "ca": "Botifarra amb Mongetes i Pebrot del Padró",
+      "en": "Catalan sausage with beans and Padrón peppers"
+    },
+    "description": {
+      "es": "Butifarra a la brasa con mongetes del ganxet",
+      "ca": "Botifarra a la brasa amb mongetes del ganxet",
+      "en": "Grilled butifarra with white beans"
+    },
+    "price": 13.5,
+    "allergens": [],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-68",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Lomo con Bacon, Huevo frito y Patatas",
+      "ca": "Lomo amb Cansalada Viada, Ou fregit i Patates",
+      "en": "Pork loin with bacon, fried egg and potatoes"
+    },
+    "description": {
+      "es": "Lomo a la plancha con bacon crujiente y huevo",
+      "ca": "Lomo a la planxa amb cansalada viada cruixent i ou",
+      "en": "Grilled loin with crispy bacon and fried egg"
+    },
+    "price": 14.95,
+    "allergens": [
+      "eggs"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-69",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Merluza a la Plancha",
+      "ca": "Lluc a la Plancha",
+      "en": "Grilled hake"
+    },
+    "description": {
+      "es": "Lomos de merluza frescos a la plancha",
+      "ca": "Lloms de lluc frescos a la planxa",
+      "en": "Fresh hake fillets grilled to order"
+    },
+    "price": 14.5,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "dish-70",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Salmón a la Plancha",
+      "ca": "Salmó a la Plancha",
+      "en": "Grilled salmon"
+    },
+    "description": {
+      "es": "Salmón fresco con guarnición",
+      "ca": "Salmó fresc amb guarnició",
+      "en": "Fresh salmon fillet with sides"
+    },
+    "price": 15,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "dish-71",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Sepia a la Plancha con Champiñones",
+      "ca": "Sípia a la Plancha amb Xampinyons",
+      "en": "Grilled cuttlefish with mushrooms"
+    },
+    "description": {
+      "es": "Sepia tierna salteada con champiñones",
+      "ca": "Sípia tendra saltada amb xampinyons",
+      "en": "Tender cuttlefish with sautéed mushrooms"
+    },
+    "price": 16,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "dish-72",
+    "categoryId": "cat-2",
+    "name": {
+      "es": "Calamares a la Romana con Ensalada y Patatas",
+      "ca": "Calamars a la Romana amb Amanida i Patates",
+      "en": "Fried calamari with salad and potatoes"
+    },
+    "description": {
+      "es": "Calamares rebozados con ensalada y patatas fritas",
+      "ca": "Calamars empanats amb amanida i patates fregides",
+      "en": "Battered squid with salad and chips"
+    },
+    "price": 14.5,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "dish-73",
+    "categoryId": "cat-3",
+    "name": {
+      "es": "Chuletón (500-600g)",
+      "ca": "Xuletó (500-600g)",
+      "en": "T-bone steak (500-600g)"
+    },
+    "description": {
+      "es": "Chuletón de vaca madurada a la brasa",
+      "ca": "Xuletó de vaca madurada a la brasa",
+      "en": "Large aged beef T-bone, grilled"
+    },
+    "price": 45,
+    "allergens": [],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-74",
+    "categoryId": "cat-3",
+    "name": {
+      "es": "Entrecot (250g)",
+      "ca": "Entrecot (250g)",
+      "en": "Ribeye (250g)"
+    },
+    "description": {
+      "es": "Entrecot seleccionado a la parrilla",
+      "ca": "Entrecot seleccionat a la graella",
+      "en": "Selected ribeye, grilled"
+    },
+    "price": 19.5,
+    "allergens": [],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-75",
+    "categoryId": "cat-3",
+    "name": {
+      "es": "Solomillo (200g)",
+      "ca": "Solomillo (200g)",
+      "en": "Sirloin (200g)"
+    },
+    "description": {
+      "es": "Solomillo de ternera a tu punto",
+      "ca": "Solomillo de vedella al punt",
+      "en": "Beef sirloin cooked to your liking"
+    },
+    "price": 25,
+    "allergens": [],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-76",
+    "categoryId": "cat-3",
+    "name": {
+      "es": "Costillas de Cordero",
+      "ca": "Costelles de Xai",
+      "en": "Lamb ribs"
+    },
+    "description": {
+      "es": "Costillas tiernas asadas con hierbas",
+      "ca": "Costelles tendres rostides amb herbes",
+      "en": "Tender roasted lamb ribs with herbs"
+    },
+    "price": 19.5,
+    "allergens": [],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-77",
+    "categoryId": "cat-4",
+    "name": {
+      "es": "Ensalada César",
+      "ca": "Amanida Cèsar",
+      "en": "Caesar salad"
+    },
+    "description": {
+      "es": "Lechuga, pollo, parmesano, picatostes y salsa césar",
+      "ca": "Enciam, pollastre, parmesà, picatostes i salsa cèsar",
+      "en": "Lettuce, chicken, parmesan, croutons and caesar dressing"
+    },
+    "price": 9.95,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose",
+      "seafood"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-78",
+    "categoryId": "cat-4",
+    "name": {
+      "es": "Ensalada Completa de la Casa",
+      "ca": "Amanida Completa de la Casa",
+      "en": "House mixed salad"
+    },
+    "description": {
+      "es": "Mezcla de lechugas, atún, huevo, tomate y extras de la casa",
+      "ca": "Barreja d'enciams, tonyina, ou, tomàquet i extres de la casa",
+      "en": "Mixed greens with tuna, egg, tomato and house toppings"
+    },
+    "price": 9.5,
+    "allergens": [
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-79",
+    "categoryId": "cat-4",
+    "name": {
+      "es": "Ensalada Griega",
+      "ca": "Amanida Grega",
+      "en": "Greek salad"
+    },
+    "description": {
+      "es": "Tomate, pepino, feta, aceitunas y orégano",
+      "ca": "Tomàquet, cogombre, feta, olives i orenga",
+      "en": "Tomato, cucumber, feta, olives and oregano"
+    },
+    "price": 9.95,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-80",
+    "categoryId": "cat-4",
+    "name": {
+      "es": "Ensalada de Aguacate y Salmón Ahumado",
+      "ca": "Amanida d'Alvocat i Salmó Fumat",
+      "en": "Avocado and smoked salmon salad"
+    },
+    "description": {
+      "es": "Aguacate fresco con láminas de salmón ahumado y vinagreta",
+      "ca": "Alvocat fresc amb làmines de salmó fumat i vinagreta",
+      "en": "Fresh avocado with smoked salmon and vinaigrette"
+    },
+    "price": 11.5,
+    "allergens": [
+      "seafood"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-81",
+    "categoryId": "cat-9",
+    "name": {
+      "es": "Carne Completa",
+      "ca": "Carn Completa",
+      "en": "Full beef burger"
+    },
+    "description": {
+      "es": "Hamburguesa de carne con guarnición completa",
+      "ca": "Hamburguesa de carn amb guarnició completa",
+      "en": "Beef burger with full toppings and sides"
+    },
+    "price": 11,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-82",
+    "categoryId": "cat-9",
+    "name": {
+      "es": "Con Queso, Patatas, Bacon y Huevo",
+      "ca": "Amb Formatge, Patates, Cansalada Viada i Ou",
+      "en": "With cheese, chips, bacon and egg"
+    },
+    "description": {
+      "es": "Hamburguesa con queso fundido, patatas, bacon y huevo frito",
+      "ca": "Hamburguesa amb formatge fos, patates, cansalada viada i ou fregit",
+      "en": "Burger with melted cheese, fries, bacon and a fried egg"
+    },
+    "price": 8.5,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-83",
+    "categoryId": "cat-9",
+    "name": {
+      "es": "Pollo Completa",
+      "ca": "Pollastre Complet",
+      "en": "Full chicken burger"
+    },
+    "description": {
+      "es": "Hamburguesa de pollo con guarnición completa",
+      "ca": "Hamburguesa de pollastre amb guarnició completa",
+      "en": "Chicken burger with full toppings and sides"
+    },
+    "price": 9.95,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-84",
+    "categoryId": "cat-9",
+    "name": {
+      "es": "Taco de Ternera con patatas",
+      "ca": "Taco de Vedella amb patates",
+      "en": "Beef taco with potatoes"
+    },
+    "description": {
+      "es": "Taco de ternera servido con patatas",
+      "ca": "Taco de vedella servit amb patates",
+      "en": "Beef taco served with potatoes"
+    },
+    "price": 8.95,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-85",
+    "categoryId": "cat-9",
+    "name": {
+      "es": "Taco de Pollo con patatas",
+      "ca": "Taco de Pollastre amb patates",
+      "en": "Chicken taco with potatoes"
+    },
+    "description": {
+      "es": "Taco de pollo servido con patatas",
+      "ca": "Taco de pollastre servit amb patates",
+      "en": "Chicken taco served with potatoes"
+    },
+    "price": 8.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-86",
+    "categoryId": "cat-10",
+    "name": {
+      "es": "Rigatoni a la Boloñesa",
+      "ca": "Rigatoni a la Bolonyesa",
+      "en": "Rigatoni Bolognese"
+    },
+    "description": {
+      "es": "Rigatoni con ragú de carne y tomate",
+      "ca": "Rigatoni amb ragú de carn i tomàquet",
+      "en": "Rigatoni with meat and tomato ragù"
+    },
+    "price": 10.5,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-87",
+    "categoryId": "cat-10",
+    "name": {
+      "es": "Rigatoni a la Carbonara",
+      "ca": "Rigatoni a la Carbonara",
+      "en": "Rigatoni carbonara"
+    },
+    "description": {
+      "es": "Salsa carbonara con huevo, queso y panceta",
+      "ca": "Salsa carbonara amb ou, formatge i cansalada",
+      "en": "Carbonara sauce with egg, cheese and bacon"
+    },
+    "price": 11,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-88",
+    "categoryId": "cat-10",
+    "name": {
+      "es": "Lasaña de Carne con Bechamel",
+      "ca": "Lasanya de Carn amb Beixamel",
+      "en": "Meat lasagna with béchamel"
+    },
+    "description": {
+      "es": "Lasaña casera de carne gratinada con bechamel",
+      "ca": "Lasanya casolana de carn gratinada amb beixamel",
+      "en": "Homemade meat lasagna gratinated with béchamel"
+    },
+    "price": 13,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-89",
+    "categoryId": "cat-10",
+    "name": {
+      "es": "Canelones de Espinaca Crujiente y Gambas",
+      "ca": "Canelons d'Espinaca Cruixent i Gambes",
+      "en": "Cannelloni with crispy spinach and prawns"
+    },
+    "description": {
+      "es": "Canelones rellenos de espinaca y gambas, acabado crujiente",
+      "ca": "Canelons farcits d'espinaca i gambes, acabat cruixent",
+      "en": "Cannelloni filled with spinach and prawns, crispy finish"
+    },
+    "price": 14.5,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs",
+      "seafood"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-90",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Jamón de Bodega",
+      "ca": "Tostada de Pernil de Bodega",
+      "en": "Cellar-cured ham toast"
+    },
+    "description": {
+      "es": "Pan de payès tostado con jamón de bodega",
+      "ca": "Pa de pagès torrat amb pernil de bodega",
+      "en": "Toasted farmhouse bread with cellar-cured ham"
+    },
+    "price": 9.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-91",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Queso Manchego",
+      "ca": "Tostada de Formatge Manchego",
+      "en": "Manchego cheese toast"
+    },
+    "description": {
+      "es": "Queso manchego curado sobre pan tostado",
+      "ca": "Formatge manxec curat sobre pa torrat",
+      "en": "Aged Manchego on toasted bread"
+    },
+    "price": 7.5,
+    "allergens": [
+      "gluten",
+      "lactose"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-92",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Aguacate y Salmón Ahumado",
+      "ca": "Tostada d'Alvocat i Salmó Fumat",
+      "en": "Avocado and smoked salmon toast"
+    },
+    "description": {
+      "es": "Aguacate y salmón ahumado sobre pan de payès",
+      "ca": "Alvocat i salmó fumat sobre pa de pagès",
+      "en": "Avocado and smoked salmon on toasted farmhouse bread"
+    },
+    "price": 10.5,
+    "allergens": [
+      "gluten",
+      "seafood"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-93",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Atún y Anchoas",
+      "ca": "Tostada de Tonyina i Anxoves",
+      "en": "Tuna and anchovy toast"
+    },
+    "description": {
+      "es": "Atún y anchoas del Cantábrico sobre pan tostado",
+      "ca": "Tonyina i anxoves del Cantàbric sobre pa torrat",
+      "en": "Tuna and Cantabrian anchovies on toast"
+    },
+    "price": 8.95,
+    "allergens": [
+      "gluten",
+      "seafood",
+      "eggs"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-94",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Fuet",
+      "ca": "Tostada de Fuet",
+      "en": "Fuet sausage toast"
+    },
+    "description": {
+      "es": "Fuet catalán sobre pan de payès tostado",
+      "ca": "Fuet català sobre pa de pagès torrat",
+      "en": "Catalan fuet on toasted farmhouse bread"
+    },
+    "price": 7.5,
+    "allergens": [
+      "gluten"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-95",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada con Aguacate, Huevos y Tomate",
+      "ca": "Tostada amb Alvocat, Ous i Tomàquet",
+      "en": "Toast with avocado, eggs and tomato"
+    },
+    "description": {
+      "es": "Pan tostado con aguacate, huevo y tomate fresco",
+      "ca": "Pa torrat amb alvocat, ou i tomàquet fresc",
+      "en": "Toasted bread with avocado, egg and fresh tomato"
+    },
+    "price": 10.5,
+    "allergens": [
+      "gluten",
+      "eggs"
+    ],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-96",
+    "categoryId": "cat-11",
+    "name": {
+      "es": "Tostada de Tomate y Boquerones",
+      "ca": "Tostada de Tomàquet i Boquerons",
+      "en": "Tomato and anchovy toast"
+    },
+    "description": {
+      "es": "Tomate rallado y boquerones en vinagre sobre pan payès",
+      "ca": "Tomàquet ratllat i boquerons en vinagre sobre pa de pagès",
+      "en": "Grated tomato and vinegar anchovies on farmhouse bread"
+    },
+    "price": 7.95,
+    "allergens": [
+      "gluten",
+      "seafood"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-97",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Tarta del día",
+      "ca": "Pastís del dia",
+      "en": "Cake of the day"
+    },
+    "description": {
+      "es": "Selección de repostería del día elaborada en casa",
+      "ca": "Selecció de pastisseria del dia elaborada a casa",
+      "en": "Homemade cake or tart selection of the day"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dish-98",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Flan con nata",
+      "ca": "Flam amb nata",
+      "en": "Caramel custard with cream"
+    },
+    "description": {
+      "es": "Flan casero con nata montada",
+      "ca": "Flam casolà amb nata muntada",
+      "en": "Homemade caramel flan with whipped cream"
+    },
+    "price": 4.5,
+    "allergens": [
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dish-99",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Yogur griego con miel y nueces",
+      "ca": "Iogurt grec amb mel i nous",
+      "en": "Greek yogurt with honey and walnuts"
+    },
+    "description": {
+      "es": "Yogur cremoso con miel y nueces tostadas",
+      "ca": "Iogurt cremós amb mel i nous torrades",
+      "en": "Creamy yogurt with honey and toasted walnuts"
+    },
+    "price": 3.95,
+    "allergens": [
+      "lactose",
+      "nuts"
+    ],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "dish-100",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Puding casero con nata",
+      "ca": "Púding casolà amb nata",
+      "en": "Homemade pudding with cream"
+    },
+    "description": {
+      "es": "Puding casero servido con nata",
+      "ca": "Púding casolà servit amb nata",
+      "en": "Homemade pudding served with cream"
+    },
+    "price": 4.5,
+    "allergens": [
+      "lactose",
+      "eggs",
+      "gluten"
+    ],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dish-101",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Brownie con helado de vainilla",
+      "ca": "Brownie amb gelat de vainilla",
+      "en": "Brownie with vanilla ice cream"
+    },
+    "description": {
+      "es": "Brownie de chocolate templado con bola de helado de vainilla",
+      "ca": "Brownie de xocolata templat amb bola de gelat de vainilla",
+      "en": "Warm chocolate brownie with a scoop of vanilla ice cream"
+    },
+    "price": 6.75,
+    "allergens": [
+      "gluten",
+      "eggs",
+      "lactose"
+    ],
+    "active": true,
+    "order": 5
+  },
+  {
+    "id": "dish-102",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Macedonia de fruta natural",
+      "ca": "Macedònia de fruita natural",
+      "en": "Fresh fruit salad"
+    },
+    "description": {
+      "es": "Fruta fresca cortada al momento",
+      "ca": "Fruita fresca tallada al moment",
+      "en": "Fresh seasonal fruit cut to order"
+    },
+    "price": 4.95,
+    "allergens": [],
+    "active": true,
+    "order": 6
+  },
+  {
+    "id": "dish-103",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Arroz con leche",
+      "ca": "Arroç amb llet",
+      "en": "Rice pudding"
+    },
+    "description": {
+      "es": "Arroz con leche casero con canela",
+      "ca": "Arròs amb llet casolà amb canyella",
+      "en": "Homemade rice pudding with cinnamon"
+    },
+    "price": 3.5,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 7
+  },
+  {
+    "id": "dish-104",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Miel y mató",
+      "ca": "Mel i mató",
+      "en": "Honey and fresh cheese"
+    },
+    "description": {
+      "es": "Mató fresco con miel de flores",
+      "ca": "Mató fresc amb mel de flors",
+      "en": "Fresh Catalan mató cheese with floral honey"
+    },
+    "price": 4,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 8
+  },
+  {
+    "id": "dish-105",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Copa Brasil",
+      "ca": "Copa Brasil",
+      "en": "Brasil sundae"
+    },
+    "description": {
+      "es": "Helado de nata con café y chocolate",
+      "ca": "Gelat de nata amb cafè i xocolata",
+      "en": "Cream ice cream with coffee and chocolate"
+    },
+    "price": 4,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 9
+  },
+  {
+    "id": "dish-106",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Copa Limón",
+      "ca": "Copa Llimona",
+      "en": "Lemon sundae"
+    },
+    "description": {
+      "es": "Helado de limón",
+      "ca": "Gelat de llimona",
+      "en": "Lemon ice cream"
+    },
+    "price": 5.5,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 10
+  },
+  {
+    "id": "dish-107",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Terrina Whisky",
+      "ca": "Terrina Whisky",
+      "en": "Whisky terrine"
+    },
+    "description": {
+      "es": "Biscuit, nata, whisky y azúcar quemado",
+      "ca": "Biscuit, nata, whisky i sucre cremat",
+      "en": "Biscuit, cream, whisky and caramelized sugar"
+    },
+    "price": 4.95,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 11
+  },
+  {
+    "id": "dish-108",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Copa Duo Chocolate y Vainilla",
+      "ca": "Copa Duo Xocolata i Vainilla",
+      "en": "Duo chocolate and vanilla cup"
+    },
+    "description": {
+      "es": "Helado de vainilla y chocolate negro",
+      "ca": "Gelat de vainilla i xocolata negra",
+      "en": "Vanilla and dark chocolate ice cream"
+    },
+    "price": 5.5,
+    "allergens": [
+      "lactose"
+    ],
+    "active": true,
+    "order": 12
+  },
+  {
+    "id": "dish-109",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Helado de crema catalana",
+      "ca": "Gelat de crema catalana",
+      "en": "Crème brûlée ice cream"
+    },
+    "description": {
+      "es": "Helado sabor crema catalana",
+      "ca": "Gelat sabor crema catalana",
+      "en": "Catalan cream–flavoured ice cream"
+    },
+    "price": 4.95,
+    "allergens": [
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 13
+  },
+  {
+    "id": "dish-110",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Magnum Pistacho",
+      "ca": "Magnum Pistatxo",
+      "en": "Pistachio Magnum-style bar"
+    },
+    "description": {
+      "es": "Helado sabor pistacho con chocolate",
+      "ca": "Gelat sabor festuc amb xocolata",
+      "en": "Pistachio ice cream with chocolate coating"
+    },
+    "price": 4,
+    "allergens": [
+      "lactose",
+      "nuts"
+    ],
+    "active": true,
+    "order": 14
+  },
+  {
+    "id": "dish-111",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Monoporción 3 Chocolates",
+      "ca": "Monoporció 3 Xocolates",
+      "en": "Single-serve triple chocolate"
+    },
+    "description": {
+      "es": "Mousse de chocolate, trocitos de bizcocho y chocolate",
+      "ca": "Mousse de xocolata, trossets de pa de pessic i xocolata",
+      "en": "Chocolate mousse with sponge cake pieces and chocolate"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 15
+  },
+  {
+    "id": "dish-112",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Monoporción Cheesecake",
+      "ca": "Monoporció Cheesecake",
+      "en": "Single-serve cheesecake"
+    },
+    "description": {
+      "es": "Cheesecake con galleta y sirope de frutas del bosque",
+      "ca": "Cheesecake amb galeta i xarop de fruites del bosc",
+      "en": "Cheesecake with biscuit and wild berry syrup"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 16
+  },
+  {
+    "id": "dish-113",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Monoporción Tiramisú",
+      "ca": "Monoporció Tiramisú",
+      "en": "Single-serve tiramisu"
+    },
+    "description": {
+      "es": "Crema mascarpone, bizcocho, salsa de café y cacao en polvo",
+      "ca": "Crema mascarpone, pa de pessic, salsa de cafè i cacau en pols",
+      "en": "Mascarpone cream, sponge cake, coffee sauce and cocoa powder"
+    },
+    "price": 5.5,
+    "allergens": [
+      "gluten",
+      "lactose",
+      "eggs"
+    ],
+    "active": true,
+    "order": 17
+  },
+  {
+    "id": "dish-114",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Magnum Almendras",
+      "ca": "Magnum Ametlles",
+      "en": "Almond Magnum-style bar"
+    },
+    "description": {
+      "es": "Helado de vainilla, chocolate y almendras",
+      "ca": "Gelat de vainilla, xocolata i ametlles",
+      "en": "Vanilla ice cream with chocolate and almonds"
+    },
+    "price": 4,
+    "allergens": [
+      "lactose",
+      "nuts"
+    ],
+    "active": true,
+    "order": 18
+  },
+
+  {
+    "id": "dish-116",
+    "categoryId": "cat-12",
+    "name": {
+      "es": "Trufas de chocolate",
+      "ca": "Trufes de xocolata",
+      "en": "Chocolate truffles"
+    },
+    "description": {
+      "es": "Trufas de chocolate artesanas",
+      "ca": "Trufes de xocolata artesanes",
+      "en": "Handcrafted chocolate truffles"
+    },
+    "price": 5.95,
+    "allergens": [
+      "lactose",
+      "nuts"
+    ],
+    "active": true,
+    "order": 20
   }
 ]

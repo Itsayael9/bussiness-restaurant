@@ -4,7 +4,7 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "PREMIUM Menu Recipine",
+    "title": "Menu Business",
     "subtitle": "Sabores tradicionales de Barcelona"
   },
   "search": {
@@ -15,6 +15,28 @@
   "categories": {
     "title": "Nuestras Categorías",
     "subtitle": "Descubre nuestra selección"
+  },
+  "location": {
+    "title": "Dónde estamos",
+    "subtitle": "Barcelona",
+    "mapTitle": "Mapa: Restaurant Business",
+    "openMaps": "Abrir en Google Maps"
+  },
+  "hours": {
+    "title": "Horario",
+    "brief": "Horario: De lunes a jueves 07:00—23:30, fin de semana: 08:00—00:00",
+    "subtitle": "Consulta rápida por día",
+    "closed": "Cerrado",
+    "days": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "footerNote": "El horario puede variar en festivos y fechas especiales."
   },
   "category": {
     "back": "← Volver al menú",

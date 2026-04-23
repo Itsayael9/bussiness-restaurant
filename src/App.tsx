@@ -7,6 +7,7 @@ import { Toaster as HotToaster } from "react-hot-toast";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./i18n";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import Index from "./pages/Index.tsx";
 import CategoryDetail from "./pages/CategoryDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -22,6 +23,7 @@ const App = () => (
         <Sonner />
         <HotToaster position="top-center" />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/category/:categoryId" element={<CategoryDetail />} />

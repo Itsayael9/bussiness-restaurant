@@ -18,7 +18,7 @@ const HeroSlider = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 2000);
     return () => clearInterval(id);
   }, []);
 

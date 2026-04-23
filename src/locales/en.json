@@ -16,6 +16,28 @@
     "title": "Our Categories",
     "subtitle": "Discover our selection"
   },
+  "location": {
+    "title": "Find us",
+    "subtitle": "Barcelona",
+    "mapTitle": "Map: Restaurant Business",
+    "openMaps": "Open in Google Maps"
+  },
+  "hours": {
+    "title": "Opening hours",
+    "brief": "Hours: Monday to Thursday 07:00—23:30, weekend: 08:00—00:00",
+    "subtitle": "Quick daily schedule",
+    "closed": "Closed",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "footerNote": "Hours may vary on public holidays and special dates."
+  },
   "category": {
     "back": "← Back to menu",
     "dishes": "Dishes",

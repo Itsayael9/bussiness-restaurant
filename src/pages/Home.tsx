@@ -3,6 +3,7 @@ import Header from "@/components/customer/Header";
 import HeroSlider from "@/components/customer/HeroSlider";
 import SearchBar from "@/components/customer/SearchBar";
 import CategoryGrid from "@/components/customer/CategoryGrid";
+import LocationMapSection from "@/components/customer/LocationMapSection";
 import FloatingActions from "@/components/customer/FloatingActions";
 import Footer from "@/components/customer/Footer";
 
@@ -21,6 +22,7 @@ const Home = () => {
           <SearchBar />
         </div>
         <CategoryGrid />
+        <LocationMapSection />
       </main>
       <Footer />
       <FloatingActions />

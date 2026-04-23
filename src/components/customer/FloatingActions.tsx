@@ -3,14 +3,19 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import restaurant from "@/data/restaurant.json";
 
+type RestaurantData = typeof restaurant & { googleMapsUrl?: string };
+const data = restaurant as RestaurantData;
+
 const FloatingActions = () => {
   const { t } = useTranslation();
 
-  const wa = `https://wa.me/${restaurant.whatsapp.replace(
+  const wa = `https://wa.me/${data.whatsapp.replace(
     /\D/g,
     ""
   )}?text=Hola%2C%20quisiera%20hacer%20una%20reserva`;
-  const map = `https://www.google.com/maps?q=${restaurant.coordinates.lat},${restaurant.coordinates.lng}`;
+  const map =
+    data.googleMapsUrl ??
+    `https://www.google.com/maps?q=${data.coordinates.lat},${data.coordinates.lng}`;
 
   return (
     <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 flex flex-col gap-3">

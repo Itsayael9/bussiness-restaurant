@@ -1,30 +1,134 @@
 [
   {
     "id": "cat-1",
-    "name": { "es": "Bocadillos", "ca": "Entrepans", "en": "Sandwiches" },
-    "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=800",
+    "name": {
+      "es": "Bocadillos Calientes",
+      "ca": "Entrepans calents",
+      "en": "Hot sandwiches"
+    },
+    "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=1920&h=1440&q=85",
     "order": 1,
     "active": true
   },
   {
     "id": "cat-2",
-    "name": { "es": "Ensaladas", "ca": "Amanides", "en": "Salads" },
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+    "name": {
+      "es": "Platos Combinados",
+      "ca": "Plats combinats",
+      "en": "Combination plates"
+    },
+    "image": "/images/cat-2.png",
     "order": 2,
     "active": true
   },
   {
     "id": "cat-3",
-    "name": { "es": "Platos Principales", "ca": "Plats Principals", "en": "Main Courses" },
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "name": {
+      "es": "Carnes",
+      "ca": "Carns",
+      "en": "Meats"
+    },
+    "image": "/images/cat-3.jpg",
     "order": 3,
     "active": true
   },
   {
     "id": "cat-4",
-    "name": { "es": "Postres", "ca": "Postres", "en": "Desserts" },
-    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+    "name": {
+      "es": "Ensaladas",
+      "ca": "Amanides",
+      "en": "Salads"
+    },
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1920&h=1440&q=85",
     "order": 4,
+    "active": true
+  },
+  {
+    "id": "cat-5",
+    "name": {
+      "es": "Tapas Calientes",
+      "ca": "Tapes calentes",
+      "en": "Hot tapas"
+    },
+    "image": "/images/cat-5.png",
+    "order": 5,
+    "active": true
+  },
+  {
+    "id": "cat-6",
+    "name": {
+      "es": "Tapas Frías",
+      "ca": "Tapes fredes",
+      "en": "Cold tapas"
+    },
+    "image": "https://images.unsplash.com/photo-1640618491853-95b2c5041eda?auto=format&fit=crop&w=1920&h=1440&q=85",
+    "order": 6,
+    "active": true
+  },
+  {
+    "id": "cat-7",
+    "name": {
+      "es": "Bocadillos Fríos",
+      "ca": "Entrepans freds",
+      "en": "Cold sandwiches"
+    },
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1920&h=1440&q=85",
+    "order": 7,
+    "active": true
+  },
+  {
+    "id": "cat-8",
+    "name": {
+      "es": "Bocadillos de embutidos",
+      "ca": "Entrepans d'embotits",
+      "en": "Cold-cut sandwiches"
+    },
+    "image": "https://images.unsplash.com/photo-1616631124348-c63521eb484c?auto=format&fit=crop&w=1920&h=1440&q=85",
+    "order": 8,
+    "active": true
+  },
+  {
+    "id": "cat-9",
+    "name": {
+      "es": "Hamburguesas y tacos",
+      "ca": "Hamburgueses i tacos",
+      "en": "Burgers and tacos"
+    },
+    "image": "/images/cat-9.png",
+    "order": 9,
+    "active": true
+  },
+  {
+    "id": "cat-10",
+    "name": {
+      "es": "Pastas",
+      "ca": "Pastes",
+      "en": "Pasta"
+    },
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1920&h=1440&q=85",
+    "order": 10,
+    "active": true
+  },
+  {
+    "id": "cat-11",
+    "name": {
+      "es": "Tostadas con pan del pages",
+      "ca": "Tostades amb pa del pages",
+      "en": "Toast with pages bread"
+    },
+    "image": "/images/cat-11.png",
+    "order": 11,
+    "active": true
+  },
+  {
+    "id": "cat-12",
+    "name": {
+      "es": "Postres",
+      "ca": "Postres",
+      "en": "Desserts"
+    },
+    "image": "/images/cat-12.jpg",
+    "order": 12,
     "active": true
   }
 ]

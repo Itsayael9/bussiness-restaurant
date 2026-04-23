@@ -4,7 +4,7 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "PREMIUM Menu Recipine",
+    "title": "Menu Business",
     "subtitle": "Sabors tradicionals de Barcelona"
   },
   "search": {
@@ -15,6 +15,28 @@
   "categories": {
     "title": "Les nostres Categories",
     "subtitle": "Descobreix la nostra selecció"
+  },
+  "location": {
+    "title": "On som",
+    "subtitle": "Barcelona",
+    "mapTitle": "Mapa: Restaurant Business",
+    "openMaps": "Obrir a Google Maps"
+  },
+  "hours": {
+    "title": "Horari",
+    "brief": "Horari: De dilluns a dijous 07:00—23:30, cap de setmana: 08:00—00:00",
+    "subtitle": "Consulta ràpida per dia",
+    "closed": "Tancat",
+    "days": {
+      "monday": "Dilluns",
+      "tuesday": "Dimarts",
+      "wednesday": "Dimecres",
+      "thursday": "Dijous",
+      "friday": "Divendres",
+      "saturday": "Dissabte",
+      "sunday": "Diumenge"
+    },
+    "footerNote": "L'horari pot variar en festius i dates especials."
   },
   "category": {
     "back": "← Tornar al menú",

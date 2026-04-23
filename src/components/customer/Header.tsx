@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 import ThemeToggle from "@/components/shared/ThemeToggle";
 import SearchBar from "./SearchBar";
 import restaurant from "@/data/restaurant.json";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -27,6 +29,17 @@ const Header = () => {
             : "bg-background"
         }`}
       >
+        <div
+          className={`bg-gold text-black dark:bg-white dark:text-black border-b border-black/20 dark:border-white/20 transition-all duration-300 overflow-hidden ${
+            scrolled ? "max-h-0 opacity-0 border-b-0" : "max-h-8 opacity-100"
+          }`}
+        >
+          <div className="container h-8 flex items-center justify-center">
+            <p className="text-[11px] sm:text-xs font-medium tracking-wide text-center truncate">
+              {t("hours.brief")}
+            </p>
+          </div>
+        </div>
         <div className="container flex items-center justify-between h-16 sm:h-20 gap-4">
           <Link to="/" className="shrink-0 flex items-center gap-2">
             <span className="font-display text-gold text-xl sm:text-2xl font-bold tracking-tight">

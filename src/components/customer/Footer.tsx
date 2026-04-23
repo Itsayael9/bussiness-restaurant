@@ -1,9 +1,10 @@
-import { Instagram, Facebook, MapPin, Phone } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import restaurant from "@/data/restaurant.json";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const phoneHref = `tel:${restaurant.phone.replace(/\D/g, "")}`;
   return (
     <footer className="bg-ink text-white py-12 sm:py-16 mt-12">
       <div className="container text-center space-y-6">
@@ -22,18 +23,20 @@ const Footer = () => {
         </div>
         <div className="flex items-center justify-center gap-3 pt-2">
           <a
-            href="#"
+            href="https://www.instagram.com/restaurantebusiness/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold transition-smooth"
           >
             <Instagram size={18} />
           </a>
           <a
-            href="#"
-            aria-label="Facebook"
+            href={phoneHref}
+            aria-label="Call"
             className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold transition-smooth"
           >
-            <Facebook size={18} />
+            <Phone size={18} />
           </a>
         </div>
         <p className="text-xs text-white/50 pt-4">
