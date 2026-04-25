@@ -1,21 +1,23 @@
 import { MapPin, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import restaurant from "@/data/restaurant.json";
-
-type RestaurantData = typeof restaurant & { googleMapsUrl?: string };
-const data = restaurant as RestaurantData;
+import { usePublicMenu } from "@/contexts/PublicMenuContext";
 
 const FloatingActions = () => {
   const { t } = useTranslation();
+  const { restaurant, loading } = usePublicMenu();
 
-  const wa = `https://wa.me/${data.whatsapp.replace(
+  if (loading || !restaurant?.whatsapp || !restaurant?.coordinates) {
+    return null;
+  }
+
+  const wa = `https://wa.me/${restaurant.whatsapp.replace(
     /\D/g,
     ""
   )}?text=Hola%2C%20quisiera%20hacer%20una%20reserva`;
   const map =
-    data.googleMapsUrl ??
-    `https://www.google.com/maps?q=${data.coordinates.lat},${data.coordinates.lng}`;
+    restaurant.googleMapsUrl ??
+    `https://www.google.com/maps?q=${restaurant.coordinates.lat},${restaurant.coordinates.lng}`;
 
   return (
     <div className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 flex flex-col gap-3">

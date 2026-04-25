@@ -9,26 +9,34 @@ import FloatingActions from "@/components/customer/FloatingActions";
 import DishList from "@/components/customer/DishList";
 import DishModal from "@/components/customer/DishModal";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { filterDishes, type Category, type Dish } from "@/utils/helpers";
-import categoriesData from "@/data/categories.json";
-import dishesData from "@/data/dishes.json";
+import { filterDishes, type Dish } from "@/utils/helpers";
+import { usePublicMenu } from "@/contexts/PublicMenuContext";
 
 const CategoryDetail = () => {
   const { categoryId } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { lang } = useLanguage();
+  const { categories, dishes: allDishes, loading } = usePublicMenu();
   const [selected, setSelected] = useState<Dish | null>(null);
 
   const category = useMemo(
-    () => (categoriesData as Category[]).find((c) => c.id === categoryId),
-    [categoryId]
+    () => categories.find((c) => c.id === categoryId),
+    [categories, categoryId]
   );
 
   const dishes = useMemo(
-    () => (categoryId ? filterDishes(dishesData as Dish[], categoryId) : []),
-    [categoryId]
+    () => (categoryId ? filterDishes(allDishes, categoryId) : []),
+    [categoryId, allDishes]
   );
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="h-10 w-10 rounded-full border-2 border-gold border-t-transparent animate-spin" />
+      </div>
+    );
+  }
 
   if (!category) {
     return (

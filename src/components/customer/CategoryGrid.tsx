@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import categoriesData from "@/data/categories.json";
-import { type Category } from "@/utils/helpers";
+import { usePublicMenu } from "@/contexts/PublicMenuContext";
 import CategoryCard from "./CategoryCard";
 
 const CategoryGrid = () => {
   const { t } = useTranslation();
-  const [loading, setLoading] = useState(true);
+  const { categories: categoriesRaw, loading } = usePublicMenu();
   const [favorites, setFavorites] = useState<string[]>(() => {
     try {
       return JSON.parse(localStorage.getItem("favorites") || "[]");
@@ -14,11 +13,6 @@ const CategoryGrid = () => {
       return [];
     }
   });
-
-  useEffect(() => {
-    const id = setTimeout(() => setLoading(false), 350);
-    return () => clearTimeout(id);
-  }, []);
 
   const toggleFavorite = (id: string) => {
     setFavorites((prev) => {
@@ -28,9 +22,7 @@ const CategoryGrid = () => {
     });
   };
 
-  const categories = (categoriesData as Category[])
-    .filter((c) => c.active)
-    .sort((a, b) => a.order - b.order);
+  const categories = categoriesRaw.filter((c) => c.active).sort((a, b) => a.order - b.order);
 
   return (
     <section id="categories" className="container py-16 sm:py-24">

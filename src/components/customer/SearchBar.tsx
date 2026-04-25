@@ -3,16 +3,13 @@ import { Search, X, Tag, UtensilsCrossed } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { searchData, type Category, type Dish } from "@/utils/helpers";
-import categoriesData from "@/data/categories.json";
-import dishesData from "@/data/dishes.json";
-
-const categories = categoriesData as Category[];
-const dishes = dishesData as Dish[];
+import { searchData } from "@/utils/helpers";
+import { usePublicMenu } from "@/contexts/PublicMenuContext";
 
 const SearchBar = ({ variant = "hero" }: { variant?: "hero" | "header" }) => {
   const { t } = useTranslation();
   const { lang } = useLanguage();
+  const { categories, dishes } = usePublicMenu();
   const navigate = useNavigate();
   const [term, setTerm] = useState("");
   const [debounced, setDebounced] = useState("");
@@ -34,7 +31,7 @@ const SearchBar = ({ variant = "hero" }: { variant?: "hero" | "header" }) => {
 
   const results = useMemo(
     () => searchData(debounced, categories, dishes, lang),
-    [debounced, lang]
+    [debounced, lang, categories, dishes]
   );
 
   const handleSelect = (catId: string) => {

@@ -1,26 +1,41 @@
 import { motion } from "framer-motion";
 import { Clock, ExternalLink, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useLanguage, type Lang } from "@/contexts/LanguageContext";
-import restaurant from "@/data/restaurant.json";
-
-type Localized = Record<Lang, string>;
+import { useLanguage } from "@/contexts/LanguageContext";
+import { usePublicMenu } from "@/contexts/PublicMenuContext";
+import type { RestaurantInfo } from "@/types/publicSite";
 
 type WeekDay = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
 type OpeningDay = { day: WeekDay; from?: string; to?: string };
 
-type RestaurantData = typeof restaurant & {
-  googleMapsUrl?: string;
+type RestaurantData = RestaurantInfo & {
   openingHours?: {
     weekly: OpeningDay[];
   };
 };
 
-const data = restaurant as RestaurantData;
-
 const LocationMapSection = () => {
   const { t } = useTranslation();
   const { lang } = useLanguage();
+  const { restaurant, loading } = usePublicMenu();
+
+  if (loading) {
+    return (
+      <section
+        id="location"
+        className="container py-16 sm:py-20"
+        aria-busy="true"
+      >
+        <div className="max-w-5xl mx-auto h-64 rounded-2xl bg-secondary animate-pulse" />
+      </section>
+    );
+  }
+
+  if (!restaurant?.coordinates) {
+    return null;
+  }
+
+  const data = restaurant as RestaurantData;
   const { lat, lng } = data.coordinates;
   const hl = lang === "en" ? "en" : lang === "ca" ? "ca" : "es";
   const embedSrc = `https://www.google.com/maps?q=${lat}%2C${lng}&z=17&hl=${hl}&output=embed`;
