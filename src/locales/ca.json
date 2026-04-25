@@ -38,6 +38,12 @@
     },
     "footerNote": "L'horari pot variar en festius i dates especials."
   },
+  "about": {
+    "title": "Sobre nosaltres",
+    "subtitle": "La nostra essència",
+    "quote": "Experiències que deixen records, sabors que perduren.",
+    "description": "A Restaurant Business celebrem l'essència mediterrània de sempre amb una manera nova, propera i cuidada de viure-la. Cada plat neix per compartir moments, sabors honestos i una experiència que queda a la memòria."
+  },
   "category": {
     "back": "← Tornar al menú",
     "dishes": "Plats",

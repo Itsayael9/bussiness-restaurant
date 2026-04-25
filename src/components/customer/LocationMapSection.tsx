@@ -143,6 +143,33 @@ const LocationMapSection = () => {
           </div>
         </div>
       </motion.div>
+
+      <motion.article
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="max-w-5xl mx-auto mt-10 sm:mt-12 rounded-3xl border border-border bg-card shadow-soft overflow-hidden"
+      >
+        <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="bg-ink text-white p-7 sm:p-10 flex flex-col justify-center">
+            <p className="text-white/70 text-xs sm:text-sm tracking-[0.4em] uppercase mb-4">
+              {t("about.subtitle")}
+            </p>
+            <h3 className="font-display text-3xl sm:text-5xl font-bold leading-tight">
+              {t("about.title")}
+            </h3>
+          </div>
+          <div className="p-7 sm:p-10">
+            <p className="font-display text-2xl sm:text-3xl text-gold leading-snug mb-5">
+              “{t("about.quote")}”
+            </p>
+            <p className="text-muted-foreground leading-8 text-base sm:text-lg">
+              {t("about.description")}
+            </p>
+          </div>
+        </div>
+      </motion.article>
     </section>
   );
 };

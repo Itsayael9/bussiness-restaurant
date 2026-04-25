@@ -38,6 +38,12 @@
     },
     "footerNote": "El horario puede variar en festivos y fechas especiales."
   },
+  "about": {
+    "title": "Sobre nosotros",
+    "subtitle": "Nuestra esencia",
+    "quote": "Experiencias que dejan recuerdos, sabores que perduran.",
+    "description": "En Restaurant Business celebramos la esencia mediterránea de siempre con una forma nueva, cercana y cuidada de vivirla. Cada plato nace para compartir momentos, sabores honestos y una experiencia que se queda en la memoria."
+  },
   "category": {
     "back": "← Volver al menú",
     "dishes": "Platos",

@@ -38,6 +38,12 @@
     },
     "footerNote": "Hours may vary on public holidays and special dates."
   },
+  "about": {
+    "title": "About us",
+    "subtitle": "Our essence",
+    "quote": "Experiences that leave memories, flavors that last.",
+    "description": "At Restaurant Business, we celebrate the timeless Mediterranean essence with a fresh, warm and carefully crafted way to enjoy it. Every dish is made to share moments, honest flavors and an experience that stays in your memory."
+  },
   "category": {
     "back": "← Back to menu",
     "dishes": "Dishes",
