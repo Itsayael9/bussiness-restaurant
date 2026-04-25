@@ -32,11 +32,11 @@ const Header = () => {
       >
         <div
           className={`bg-gold text-white dark:bg-white dark:text-ink border-b border-black/20 dark:border-white/20 transition-all duration-300 overflow-hidden ${
-            scrolled ? "max-h-0 opacity-0 border-b-0" : "max-h-8 opacity-100"
+            scrolled ? "max-h-0 opacity-0 border-b-0" : "max-h-14 sm:max-h-8 opacity-100"
           }`}
         >
-          <div className="container h-8 flex items-center justify-center">
-            <p className="text-[11px] sm:text-xs font-medium tracking-wide text-center truncate">
+          <div className="container min-h-8 py-1 sm:py-0 flex items-center justify-center">
+            <p className="text-[10px] leading-snug sm:text-xs sm:leading-normal font-medium tracking-wide text-center sm:truncate">
               {t("hours.brief")}
             </p>
           </div>
@@ -115,7 +115,7 @@ const Header = () => {
               <div className="p-5 space-y-4">
                 <SearchBar variant="header" />
                 <div className="pt-2 flex items-center gap-3">
-                  <LanguageSwitcher />
+                  <LanguageSwitcher compact />
                   <ThemeToggle />
                 </div>
               </div>
