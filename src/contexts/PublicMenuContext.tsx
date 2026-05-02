@@ -75,13 +75,18 @@ function mapDishDoc(id: string, data: Record<string, unknown>): Dish | null {
 }
 
 export function PublicMenuProvider({ children }: { children: ReactNode }) {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [dishes, setDishes] = useState<Dish[]>([]);
-  const [restaurant, setRestaurant] = useState<RestaurantInfo | null>(null);
-  const [sliderSlides, setSliderSlides] = useState<SliderSlide[]>([]);
+  const fallbackCategories = categoriesData as Category[];
+  const fallbackDishes = dishesData as Dish[];
+  const fallbackRestaurant = restaurantData as RestaurantInfo;
+  const fallbackSliderSlides = sliderData as SliderSlide[];
+
+  const [categories, setCategories] = useState<Category[]>(fallbackCategories);
+  const [dishes, setDishes] = useState<Dish[]>(fallbackDishes);
+  const [restaurant, setRestaurant] = useState<RestaurantInfo | null>(fallbackRestaurant);
+  const [sliderSlides, setSliderSlides] = useState<SliderSlide[]>(fallbackSliderSlides);
   const [error, setError] = useState<string | null>(null);
   const gates = useRef({ categories: false, dishes: false, restaurant: false, slider: false });
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const markReady = useCallback((key: keyof typeof gates.current) => {
     gates.current[key] = true;
@@ -98,14 +103,14 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
       restaurant: false,
       slider: false,
     };
-    setLoading(true);
+    setLoading(false);
     setError(null);
 
     if (!isFirebaseConfigured || !firebaseDb) {
-      setCategories(categoriesData as Category[]);
-      setDishes(dishesData as Dish[]);
-      setRestaurant(restaurantData as RestaurantInfo);
-      setSliderSlides(sliderData as SliderSlide[]);
+      setCategories(fallbackCategories);
+      setDishes(fallbackDishes);
+      setRestaurant(fallbackRestaurant);
+      setSliderSlides(fallbackSliderSlides);
       setLoading(false);
       return;
     }
@@ -118,7 +123,7 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
           const row = mapCategoryDoc(d.id, d.data() as Record<string, unknown>);
           if (row) list.push(row);
         }
-        setCategories(list);
+        setCategories(list.length > 0 ? list : fallbackCategories);
         markReady("categories");
       },
       (e) => {
@@ -135,7 +140,7 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
           const row = mapDishDoc(d.id, d.data() as Record<string, unknown>);
           if (row) list.push(row);
         }
-        setDishes(list);
+        setDishes(list.length > 0 ? list : fallbackDishes);
         markReady("dishes");
       },
       (e) => {
@@ -148,7 +153,7 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
       doc(firebaseDb, "restaurant", "main"),
       (snap) => {
         if (!snap.exists()) {
-          setRestaurant(null);
+          setRestaurant(fallbackRestaurant);
         } else {
           setRestaurant(snap.data() as RestaurantInfo);
         }
@@ -156,7 +161,7 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
       },
       (e) => {
         setError(e.message);
-        setRestaurant(null);
+        setRestaurant(fallbackRestaurant);
         markReady("restaurant");
       }
     );
@@ -180,7 +185,7 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
             });
           }
         }
-        setSliderSlides(list);
+        setSliderSlides(list.length > 0 ? list : fallbackSliderSlides);
         markReady("slider");
       },
       (e) => {

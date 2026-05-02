@@ -21,6 +21,7 @@ export interface Dish {
   name: LocalizedString;
   description: LocalizedString;
   price: number;
+  image?: string;
   allergens: string[];
   active: boolean;
   order: number;
