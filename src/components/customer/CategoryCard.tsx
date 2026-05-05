@@ -1,7 +1,7 @@
 import { Heart, UtensilsCrossed } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Category } from "@/utils/helpers";
 
@@ -16,6 +16,17 @@ const CategoryCard = ({ category, index, isFavorite, onToggleFavorite }: Props) 
   const navigate = useNavigate();
   const { lang } = useLanguage();
   const [imgError, setImgError] = useState(false);
+  const [src, setSrc] = useState(category.image);
+
+  useEffect(() => {
+    setImgError(false);
+    setSrc(category.image);
+  }, [category.image]);
+
+  const fallbackById: Record<string, string> = {
+    "cat-3": "/images/cat-3.png",
+    "cat-12": "/images/cat-12.png",
+  };
 
   return (
     <motion.div
@@ -34,10 +45,17 @@ const CategoryCard = ({ category, index, isFavorite, onToggleFavorite }: Props) 
           </div>
         ) : (
           <img
-            src={category.image}
+            src={src}
             alt={category.name[lang]}
             loading="lazy"
-            onError={() => setImgError(true)}
+            onError={() => {
+              const fallback = fallbackById[category.id];
+              if (fallback && src !== fallback) {
+                setSrc(fallback);
+                return;
+              }
+              setImgError(true);
+            }}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
         )}

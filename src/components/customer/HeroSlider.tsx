@@ -38,11 +38,11 @@ const HeroSlider = () => {
   if (slides.length === 0) {
     return (
       <section className="relative w-full overflow-hidden bg-ink aspect-[16/9] md:aspect-[21/9] max-h-[80vh]">
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero-text)" }} />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25) 55%, rgba(0,0,0,.6))" }}
+        />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 min-h-[280px]">
-          <p className="text-white/90 text-xs sm:text-sm tracking-[0.4em] uppercase mb-3 sm:mb-5 font-medium hero-text-shadow">
-            {t("hero.subtitle")}
-          </p>
           <h1 className="font-display text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight hero-text-shadow leading-tight">
             {t("hero.title")}
           </h1>
@@ -70,7 +70,7 @@ const HeroSlider = () => {
           />
           <div
             className="absolute inset-0"
-            style={{ background: "var(--gradient-hero-text)" }}
+            style={{ background: "linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25) 55%, rgba(0,0,0,.6))" }}
           />
         </motion.div>
       </AnimatePresence>
@@ -82,9 +82,6 @@ const HeroSlider = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-white/90 text-xs sm:text-sm tracking-[0.4em] uppercase mb-3 sm:mb-5 font-medium hero-text-shadow">
-            {t("hero.subtitle")}
-          </p>
           <h1 className="font-display text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight hero-text-shadow leading-tight">
             {t("hero.title")}
           </h1>

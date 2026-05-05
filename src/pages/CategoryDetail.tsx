@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
@@ -11,6 +11,8 @@ import DishModal from "@/components/customer/DishModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { filterDishes, type Dish } from "@/utils/helpers";
 import { usePublicMenu } from "@/contexts/PublicMenuContext";
+import categoriesSeed from "@/data/categories.json";
+import dishesSeed from "@/data/dishes.json";
 
 const CategoryDetail = () => {
   const { categoryId } = useParams();
@@ -19,6 +21,7 @@ const CategoryDetail = () => {
   const { lang } = useLanguage();
   const { categories, dishes: allDishes, loading } = usePublicMenu();
   const [selected, setSelected] = useState<Dish | null>(null);
+  const [heroImage, setHeroImage] = useState("");
 
   const category = useMemo(
     () => categories.find((c) => c.id === categoryId),
@@ -26,9 +29,26 @@ const CategoryDetail = () => {
   );
 
   const dishes = useMemo(
-    () => (categoryId ? filterDishes(allDishes, categoryId) : []),
-    [categoryId, allDishes]
+    () => {
+      if (!categoryId) return [];
+      const live = filterDishes(allDishes, categoryId);
+      if (live.length > 0 || !category) return live;
+
+      const fallbackCategory = (categoriesSeed as Array<{ id: string; name: { es: string; en: string; ca: string } }>).find(
+        (c) =>
+          c.name.es === category.name.es ||
+          c.name.en === category.name.en ||
+          c.name.ca === category.name.ca
+      );
+      if (!fallbackCategory) return live;
+      return filterDishes(dishesSeed as Dish[], fallbackCategory.id);
+    },
+    [categoryId, allDishes, category]
   );
+
+  useEffect(() => {
+    setHeroImage(category?.image ?? "");
+  }, [category?.image]);
 
   if (loading) {
     return (
@@ -63,8 +83,17 @@ const CategoryDetail = () => {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[320px] sm:h-[55vh] overflow-hidden bg-ink">
         <img
-          src={category.image}
+          src={heroImage || category.image}
           alt={category.name[lang]}
+          onError={() => {
+            if (category.id === "cat-3") {
+              setHeroImage("/images/cat-3.png");
+              return;
+            }
+            if (category.id === "cat-12") {
+              setHeroImage("/images/cat-12.png");
+            }
+          }}
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero-text)" }} />

@@ -1,4 +1,4 @@
-import { FormEvent, MouseEvent, useMemo, useState } from "react";
+import { FormEvent, MouseEvent, useEffect, useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { ChevronLeft, ChevronDown, Edit, LogOut, Plus, Save, Trash2, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,10 @@ type ModalMode = "category" | "dish" | null;
 
 const fileInputClass =
   "flex h-12 w-full rounded-2xl border border-input bg-background px-4 py-3 text-sm file:mr-4 file:rounded-full file:border-0 file:bg-gold file:px-4 file:py-1 file:text-white";
+const fallbackByCategoryId: Record<string, string> = {
+  "cat-3": "/images/cat-3.png",
+  "cat-12": "/images/cat-12.png",
+};
 
 const AdminDashboard = () => {
   const { ready, user, logout, changePassword } = useAdminAuth();
@@ -49,6 +53,15 @@ const AdminDashboard = () => {
   const [error, setError] = useState("");
   const [passwordForm, setPasswordForm] = useState({ current: "", next: "" });
   const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    if (!status && !error) return;
+    const timer = window.setTimeout(() => {
+      setStatus("");
+      setError("");
+    }, 10000);
+    return () => window.clearTimeout(timer);
+  }, [status, error]);
 
   if (ready && !user) return <Navigate to={`${ADMIN_ROUTE}/login`} replace />;
 
@@ -84,11 +97,11 @@ const AdminDashboard = () => {
 
   const removeCategory = (event: MouseEvent, category: Category) => {
     event.stopPropagation();
-    if (!window.confirm(`Delete category "${category.name.es}"?`)) return;
+    if (!window.confirm(`¿Eliminar la categoría "${category.name.es}"?`)) return;
     void runAction(async () => {
       await deleteCategory(category.id);
       if (currentCategoryId === category.id) setCurrentCategoryId("");
-    }, "Category deleted.");
+    }, "Categoría eliminada.");
   };
 
   const editDish = (dish: Dish) => {
@@ -96,10 +109,10 @@ const AdminDashboard = () => {
   };
 
   const removeDish = (dish: Dish) => {
-    if (!window.confirm(`Delete plate "${dish.name.es}"?`)) return;
+    if (!window.confirm(`¿Eliminar el plato "${dish.name.es}"?`)) return;
     void runAction(async () => {
       await deleteDish(dish.id);
-    }, "Plate deleted.");
+    }, "Plato eliminado.");
   };
 
   const closeModal = () => {
@@ -124,15 +137,15 @@ const AdminDashboard = () => {
     setError("");
   };
 
-  const runAction = async (action: () => Promise<unknown>, success: string) => {
+  const runAction = async (action: () => Promise<unknown>, success: string, closeOnSuccess = true) => {
     resetMessages();
     setBusy(true);
     try {
       await action();
       setStatus(success);
-      setModalMode(null);
+      if (closeOnSuccess) setModalMode(null);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Action failed.");
+      setError(e instanceof Error ? e.message : "La acción falló.");
     } finally {
       setBusy(false);
     }
@@ -142,7 +155,7 @@ const AdminDashboard = () => {
     event.preventDefault();
     void runAction(
       () => (selectedCategoryId ? updateCategory(selectedCategoryId, categoryForm) : createCategory(categoryForm)),
-      selectedCategoryId ? "Category updated." : "Category created."
+      selectedCategoryId ? "Categoría actualizada." : "Categoría creada."
     );
   };
 
@@ -150,18 +163,26 @@ const AdminDashboard = () => {
     event.preventDefault();
     void runAction(
       () => (selectedDishId ? updateDish(selectedDishId, dishForm) : createDish(dishForm)),
-      selectedDishId ? "Dish updated." : "Dish created."
+      selectedDishId ? "Plato actualizado." : "Plato creado."
     );
   };
 
-  const autoTranslateDishName = async () => {
+  const autoTranslateDishFields = async () => {
     await runAction(async () => {
-      const translated = await translateFromSpanish(dishForm.name.es);
+      const [translatedName, translatedDescription] = await Promise.all([
+        translateFromSpanish(dishForm.name.es),
+        translateFromSpanish(dishForm.description.es),
+      ]);
       setDishForm((prev) => ({
         ...prev,
-        name: { ...prev.name, en: translated.en, ca: translated.ca },
+        name: { ...prev.name, en: translatedName.en, ca: translatedName.ca },
+        description: {
+          ...prev.description,
+          en: translatedDescription.en,
+          ca: translatedDescription.ca,
+        },
       }));
-    }, "Name translated. You can edit the result before saving.");
+    }, "Nombre y descripción traducidos. Puedes editar el resultado antes de guardar.", false);
   };
 
   const updateAdminPassword = (event: FormEvent) => {
@@ -169,7 +190,7 @@ const AdminDashboard = () => {
     void runAction(async () => {
       await changePassword(passwordForm.current, passwordForm.next);
       setPasswordForm({ current: "", next: "" });
-    }, "Password updated.");
+    }, "Contraseña actualizada.");
   };
 
   return (
@@ -197,25 +218,25 @@ const AdminDashboard = () => {
                   <form onSubmit={updateAdminPassword} className="space-y-3">
                     <Input
                       type="password"
-                      placeholder="Current password"
+                      placeholder="Contraseña actual"
                       value={passwordForm.current}
                       onChange={(e) => setPasswordForm((p) => ({ ...p, current: e.target.value }))}
                     />
                     <Input
                       type="password"
-                      placeholder="New password"
+                      placeholder="Nueva contraseña"
                       value={passwordForm.next}
                       onChange={(e) => setPasswordForm((p) => ({ ...p, next: e.target.value }))}
                     />
                     <Button type="submit" className="w-full rounded-full" disabled={busy || passwordForm.next.length < 6}>
-                      Change password
+                      Cambiar contraseña
                     </Button>
                   </form>
                   <button
                     onClick={() => void logout()}
                     className="mt-3 w-full flex items-center justify-center gap-2 text-sm text-destructive"
                   >
-                    <LogOut size={16} /> Logout
+                    <LogOut size={16} /> Cerrar sesión
                   </button>
                 </div>
               )}
@@ -255,7 +276,16 @@ const AdminDashboard = () => {
                   onClick={() => selectCategory(category)}
                   className="group relative aspect-[16/10] overflow-hidden rounded-2xl bg-secondary shadow-soft text-left"
                 >
-                  <img src={category.image} alt="" className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img
+                    src={category.image}
+                    alt=""
+                    onError={(e) => {
+                      const fallback = fallbackByCategoryId[category.id] || "/logo.png";
+                      if (e.currentTarget.src.endsWith(fallback)) return;
+                      e.currentTarget.src = fallback;
+                    }}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
                   <div className="absolute right-4 top-4 flex gap-2">
                     <span
@@ -341,7 +371,7 @@ const AdminDashboard = () => {
                 ))}
                 {categoryDishes.length === 0 && (
                   <div className="px-6 py-16 text-center text-muted-foreground">
-                    No plates in this category yet.
+                    Aún no hay platos en esta categoría.
                   </div>
                 )}
               </div>
@@ -363,25 +393,34 @@ const AdminDashboard = () => {
                 </div>
                 <Input placeholder="Nombre ES" value={categoryForm.name.es} onChange={(e) => setCategoryForm((p) => ({ ...p, name: { ...p.name, es: e.target.value } }))} />
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Input placeholder="Name EN" value={categoryForm.name.en} onChange={(e) => setCategoryForm((p) => ({ ...p, name: { ...p.name, en: e.target.value } }))} />
-                  <Input placeholder="Nom CA" value={categoryForm.name.ca} onChange={(e) => setCategoryForm((p) => ({ ...p, name: { ...p.name, ca: e.target.value } }))} />
+                <Input placeholder="Nombre EN" value={categoryForm.name.en} onChange={(e) => setCategoryForm((p) => ({ ...p, name: { ...p.name, en: e.target.value } }))} />
+                  <Input placeholder="Nombre CA" value={categoryForm.name.ca} onChange={(e) => setCategoryForm((p) => ({ ...p, name: { ...p.name, ca: e.target.value } }))} />
                 </div>
                 {selectedCategoryId && categoryForm.image && (
                   <div className="flex items-center gap-3 rounded-2xl border border-border p-3">
-                    <img src={categoryForm.image} alt="" className="h-16 w-20 rounded-xl object-cover bg-secondary" />
-                    <p className="text-sm text-muted-foreground">Upload a new image only if you want to replace the current one.</p>
+                    <img
+                      src={categoryForm.image}
+                      alt=""
+                      onError={(e) => {
+                        const fallback = fallbackByCategoryId[selectedCategoryId] || "/logo.png";
+                        if (e.currentTarget.src.endsWith(fallback)) return;
+                        e.currentTarget.src = fallback;
+                      }}
+                      className="h-16 w-20 rounded-xl object-cover bg-secondary"
+                    />
+                    <p className="text-sm text-muted-foreground">Sube una nueva imagen solo si quieres reemplazar la actual.</p>
                   </div>
                 )}
                 <input className={fileInputClass} type="file" accept="image/*" required={!selectedCategoryId} onChange={(e) => setCategoryForm((p) => ({ ...p, imageFile: e.target.files?.[0] || null }))} />
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Input type="number" placeholder="Order" value={categoryForm.order} onChange={(e) => setCategoryForm((p) => ({ ...p, order: Number(e.target.value) }))} />
+                  <Input type="number" placeholder="Orden" value={categoryForm.order} onChange={(e) => setCategoryForm((p) => ({ ...p, order: Number(e.target.value) }))} />
                   <label className="flex items-center gap-2 rounded-2xl border border-border px-4">
                     <input type="checkbox" checked={categoryForm.active} onChange={(e) => setCategoryForm((p) => ({ ...p, active: e.target.checked }))} />
-                    Active
+                    Activa
                   </label>
                 </div>
                 <Button type="submit" disabled={busy} className="w-full h-14 rounded-2xl text-base">
-                  <Save /> Save Category
+                  <Save /> Guardar categoría
                 </Button>
               </form>
             ) : (
@@ -397,38 +436,45 @@ const AdminDashboard = () => {
                   onChange={(e) => setDishForm((p) => ({ ...p, categoryId: e.target.value }))}
                   className="h-12 w-full rounded-2xl border border-input bg-background px-4 text-sm"
                 >
-                  <option value="">Select category</option>
+                  <option value="">Selecciona categoría</option>
                   {sortedCategories.map((category) => (
                     <option key={category.id} value={category.id}>{category.name.es}</option>
                   ))}
                 </select>
                 <div className="flex gap-3">
-                  <Input className="flex-1" placeholder="Nombre ES" value={dishForm.name.es} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, es: e.target.value } }))} />
-                  <Button type="button" variant="outline" onClick={() => void autoTranslateDishName()}>
+                  <Input className="flex-1" placeholder="Nombre (ES)" value={dishForm.name.es} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, es: e.target.value } }))} />
+                  <Button type="button" variant="outline" onClick={() => void autoTranslateDishFields()}>
                     Traducir
                   </Button>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Input placeholder="Name EN" value={dishForm.name.en} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, en: e.target.value } }))} />
-                  <Input placeholder="Nom CA" value={dishForm.name.ca} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, ca: e.target.value } }))} />
+                  <Input placeholder="Nombre (EN)" value={dishForm.name.en} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, en: e.target.value } }))} />
+                  <Input placeholder="Nombre (CA)" value={dishForm.name.ca} onChange={(e) => setDishForm((p) => ({ ...p, name: { ...p.name, ca: e.target.value } }))} />
                 </div>
-                <Textarea placeholder="Descripción ES" value={dishForm.description.es} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, es: e.target.value } }))} />
+                <Textarea placeholder="Descripción (ES)" value={dishForm.description.es} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, es: e.target.value } }))} />
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Textarea placeholder="Description EN" value={dishForm.description.en} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, en: e.target.value } }))} />
-                  <Textarea placeholder="Descripció CA" value={dishForm.description.ca} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, ca: e.target.value } }))} />
+                  <Textarea placeholder="Descripción (EN)" value={dishForm.description.en} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, en: e.target.value } }))} />
+                  <Textarea placeholder="Descripción (CA)" value={dishForm.description.ca} onChange={(e) => setDishForm((p) => ({ ...p, description: { ...p.description, ca: e.target.value } }))} />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Input type="number" step="0.01" placeholder="Price" value={dishForm.price} onChange={(e) => setDishForm((p) => ({ ...p, price: Number(e.target.value) }))} />
-                  <Input type="number" placeholder="Order" value={dishForm.order} onChange={(e) => setDishForm((p) => ({ ...p, order: Number(e.target.value) }))} />
+                  <Input
+                    type="text"
+                    inputMode="decimal"
+                    placeholder="Precio (€)"
+                    value={dishForm.price === 0 ? "" : String(dishForm.price)}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(",", ".");
+                      setDishForm((p) => ({ ...p, price: value === "" ? 0 : Number(value) || 0 }));
+                    }}
+                  />
+                  <Input type="number" placeholder="Orden" value={dishForm.order} onChange={(e) => setDishForm((p) => ({ ...p, order: Number(e.target.value) }))} />
                 </div>
-                <Input placeholder="Image URL" value={dishForm.image} onChange={(e) => setDishForm((p) => ({ ...p, image: e.target.value }))} />
-                <input className={fileInputClass} type="file" accept="image/*" onChange={(e) => setDishForm((p) => ({ ...p, imageFile: e.target.files?.[0] || null }))} />
                 <label className="flex items-center gap-2 text-sm">
                   <input type="checkbox" checked={dishForm.active} onChange={(e) => setDishForm((p) => ({ ...p, active: e.target.checked }))} />
                   Disponible
                 </label>
                 <Button type="submit" disabled={busy || !dishForm.categoryId} className="w-full h-14 rounded-2xl text-base">
-                  <Save /> Save Plate
+                  <Save /> Guardar plato
                 </Button>
               </form>
             )}

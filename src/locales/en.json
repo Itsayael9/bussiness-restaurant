@@ -74,5 +74,39 @@
     "title": "Page not found",
     "description": "The page you are looking for doesn't exist.",
     "back": "Back to home"
+  },
+  "autoTranslate": {
+    "dictionary": {
+      "bocadillo": "sandwich",
+      "bocadillos": "sandwiches",
+      "plato": "dish",
+      "platos": "dishes",
+      "carnes": "meats",
+      "carne": "meat",
+      "ensalada": "salad",
+      "ensaladas": "salads",
+      "tapas": "tapas",
+      "hamburguesa": "burger",
+      "hamburguesas": "burgers",
+      "taco": "taco",
+      "tacos": "tacos",
+      "tostada": "toast",
+      "tostadas": "toasts",
+      "pan": "bread",
+      "postre": "dessert",
+      "postres": "desserts",
+      "de": "of",
+      "con": "with",
+      "calientes": "hot",
+      "frías": "cold",
+      "frios": "cold",
+      "fríos": "cold",
+      "combinados": "combined",
+      "y": "and",
+      "del": "of the",
+      "la": "the",
+      "el": "the",
+      "pages": "country-style"
+    }
   }
 }

@@ -1,11 +1,4 @@
-import {
-  addDoc,
-  collection,
-  deleteDoc,
-  doc,
-  updateDoc,
-  type DocumentData,
-} from "firebase/firestore";
+import { push, ref, remove, set, update } from "firebase/database";
 import { firebaseDb } from "@/lib/firebase";
 import { uploadImageToCloudinary } from "@/lib/cloudinary";
 import type { Category, Dish, LocalizedString } from "@/utils/helpers";
@@ -48,7 +41,8 @@ export async function createCategory(data: CategoryFormData) {
     throw new Error("Please upload a category image.");
   }
   const image = await resolveImageUrl(data.image, data.imageFile, "restaurant/categories");
-  return addDoc(collection(db, "categories"), {
+  const newRef = push(ref(db, "categories"));
+  return set(newRef, {
     name: data.name,
     image,
     order: data.order,
@@ -59,23 +53,24 @@ export async function createCategory(data: CategoryFormData) {
 export async function updateCategory(categoryId: string, data: CategoryFormData) {
   const db = requireDb();
   const image = await resolveImageUrl(data.image, data.imageFile, "restaurant/categories");
-  return updateDoc(doc(db, "categories", categoryId), {
+  return update(ref(db, `categories/${categoryId}`), {
     name: data.name,
     image,
     order: data.order,
     active: data.active,
-  } satisfies DocumentData);
+  });
 }
 
 export async function deleteCategory(categoryId: string) {
   const db = requireDb();
-  return deleteDoc(doc(db, "categories", categoryId));
+  return remove(ref(db, `categories/${categoryId}`));
 }
 
 export async function createDish(data: DishFormData) {
   const db = requireDb();
   const image = await resolveImageUrl(data.image, data.imageFile, "restaurant/dishes");
-  return addDoc(collection(db, "dishes"), {
+  const newRef = push(ref(db, "dishes"));
+  return set(newRef, {
     categoryId: data.categoryId,
     name: data.name,
     description: data.description,
@@ -90,7 +85,7 @@ export async function createDish(data: DishFormData) {
 export async function updateDish(dishId: string, data: DishFormData) {
   const db = requireDb();
   const image = await resolveImageUrl(data.image, data.imageFile, "restaurant/dishes");
-  return updateDoc(doc(db, "dishes", dishId), {
+  return update(ref(db, `dishes/${dishId}`), {
     categoryId: data.categoryId,
     name: data.name,
     description: data.description,
@@ -99,12 +94,12 @@ export async function updateDish(dishId: string, data: DishFormData) {
     allergens: data.allergens,
     order: data.order,
     active: data.active,
-  } satisfies DocumentData);
+  });
 }
 
 export async function deleteDish(dishId: string) {
   const db = requireDb();
-  return deleteDoc(doc(db, "dishes", dishId));
+  return remove(ref(db, `dishes/${dishId}`));
 }
 
 export function categoryToFormData(category?: Category): CategoryFormData {

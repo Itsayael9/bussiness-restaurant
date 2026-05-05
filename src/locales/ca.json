@@ -74,5 +74,39 @@
     "title": "Pàgina no trobada",
     "description": "La pàgina que cerques no existeix.",
     "back": "Tornar a l'inici"
+  },
+  "autoTranslate": {
+    "dictionary": {
+      "bocadillo": "entrepà",
+      "bocadillos": "entrepans",
+      "plato": "plat",
+      "platos": "plats",
+      "carnes": "carns",
+      "carne": "carn",
+      "ensalada": "amanida",
+      "ensaladas": "amanides",
+      "tapas": "tapes",
+      "hamburguesa": "hamburguesa",
+      "hamburguesas": "hamburgueses",
+      "taco": "taco",
+      "tacos": "tacos",
+      "tostada": "torrada",
+      "tostadas": "torrades",
+      "pan": "pa",
+      "postre": "postres",
+      "postres": "postres",
+      "de": "de",
+      "con": "amb",
+      "calientes": "calents",
+      "frías": "fredes",
+      "frios": "freds",
+      "fríos": "freds",
+      "combinados": "combinats",
+      "y": "i",
+      "del": "del",
+      "la": "la",
+      "el": "el",
+      "pages": "de pagès"
+    }
   }
 }
