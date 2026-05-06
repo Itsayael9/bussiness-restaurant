@@ -18,7 +18,6 @@ export const isFirebaseConfigured = requiredEnvKeys.every((key) => Boolean(impor
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
@@ -32,3 +31,7 @@ export const firebaseApp: FirebaseApp | null = isFirebaseConfigured
 export const firebaseAuth: Auth | null = firebaseApp ? getAuth(firebaseApp) : null;
 export const firebaseDb: Database | null = firebaseApp ? getDatabase(firebaseApp) : null;
 export const firebaseStorage: FirebaseStorage | null = firebaseApp ? getStorage(firebaseApp) : null;
+
+////////// CHECK ENV ////////// 
+console.log("🔥 ENV CHECK:", import.meta.env);
+console.log("🔥 API KEY:", import.meta.env.VITE_FIREBASE_API_KEY);
