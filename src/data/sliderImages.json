@@ -1,19 +1,19 @@
 [
   {
     "id": "slider-1",
-    "url": "public/images/slide1.png",
+    "url": "/images/slide1.png",
     "order": 1,
     "active": true
   },
   {
     "id": "slider-2",
-    "url": "public/images/slide2.jpeg",
+    "url": "/images/slide2.jpeg",
     "order": 2,
     "active": true
   },
   {
     "id": "slider-3",
-    "url": "public/images/slide3.jpeg",
+    "url": "/images/slide3.jpeg",
     "order": 3,
     "active": true
   }
