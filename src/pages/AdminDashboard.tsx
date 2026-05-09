@@ -196,12 +196,12 @@ const AdminDashboard = () => {
   return (
     <main className="min-h-screen bg-[#fbfaf7] text-foreground">
       <header className="sticky top-0 z-40 bg-[#fbfaf7]/95 backdrop-blur border-b border-black/5">
-        <div className="mx-auto max-w-7xl h-20 px-6 flex items-center justify-between gap-4">
-          <img src="/logo.png" alt="Restaurant Business logo" className="h-12 w-12 rounded-full object-cover" />
+        <div className="mx-auto max-w-7xl h-16 sm:h-20 px-3 sm:px-6 flex items-center justify-between gap-2 sm:gap-4">
+          <img src="/logo.png" alt="Restaurant Business logo" className="h-9 w-9 sm:h-12 sm:w-12 rounded-full object-cover" />
           <p className="hidden sm:block text-sm font-medium text-muted-foreground">
-            Bienvenido admin
+            Bienvenido Youssef
           </p>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
             <div className="relative">
               <button
@@ -212,7 +212,7 @@ const AdminDashboard = () => {
                 <ChevronDown size={14} />
               </button>
               {profileOpen && (
-                <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-border bg-white shadow-elegant p-5 z-50">
+                <div className="fixed inset-x-3 top-16 sm:absolute sm:inset-x-auto sm:top-auto sm:right-0 sm:mt-3 sm:w-80 rounded-3xl border border-border bg-white shadow-elegant p-5 z-50">
                   <p className="font-semibold">Youssef</p>
                   <p className="text-sm text-muted-foreground mb-4">{user?.email || "youssef@restaurant-admin.local"}</p>
                   <form onSubmit={updateAdminPassword} className="space-y-3">
@@ -245,7 +245,7 @@ const AdminDashboard = () => {
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-6 py-10 space-y-8">
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 py-6 sm:py-10 space-y-6 sm:space-y-8">
         {(status || error) && (
           <div
             className={`rounded-2xl border px-5 py-4 text-sm ${
@@ -258,18 +258,18 @@ const AdminDashboard = () => {
 
         {!currentCategory ? (
           <section>
-            <div className="flex items-center justify-between gap-4 mb-8">
-              <h1 className="font-display text-5xl sm:text-6xl text-foreground">Dashboard</h1>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <h1 className="font-display text-3xl sm:text-5xl md:text-6xl text-foreground">Dashboard</h1>
               <Button
                 type="button"
                 onClick={() => openCategoryForm()}
-                className="rounded-2xl h-14 px-6 text-base shadow-gold"
+                className="rounded-2xl h-12 sm:h-14 px-4 sm:px-6 text-sm sm:text-base shadow-gold w-full sm:w-auto"
               >
                 <Plus /> Nueva Categoria
               </Button>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {sortedCategories.map((category) => (
                 <button
                   key={category.id}
@@ -312,59 +312,56 @@ const AdminDashboard = () => {
           </section>
         ) : (
           <section>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div>
                 <button
                   onClick={() => setCurrentCategoryId("")}
-                  className="mb-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold"
+                  className="mb-3 sm:mb-4 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold"
                 >
                   <ChevronLeft size={17} /> Volver categorias
                 </button>
-                <h1 className="font-display text-4xl sm:text-6xl text-foreground">
+                <h1 className="font-display text-2xl sm:text-4xl md:text-6xl text-foreground">
                   {currentCategory.name[lang]}
                 </h1>
               </div>
               <Button
                 type="button"
                 onClick={() => openDishForm()}
-                className="rounded-2xl h-14 px-6 text-base shadow-gold"
+                className="rounded-2xl h-12 sm:h-14 px-4 sm:px-6 text-sm sm:text-base shadow-gold w-full sm:w-auto"
               >
                 <Plus /> Nuevo Plato
               </Button>
             </div>
 
-            <div className="rounded-3xl bg-white shadow-soft overflow-hidden">
+            <div className="rounded-2xl sm:rounded-3xl bg-white shadow-soft overflow-hidden">
               <div className="divide-y divide-border">
                 {categoryDishes.map((dish) => (
-                  <div key={dish.id} className="grid grid-cols-[70px_1fr] sm:grid-cols-[82px_1.2fr_1.6fr_110px_70px_90px] gap-4 items-center px-4 sm:px-6 py-4">
+                  <div key={dish.id} className="flex items-center gap-3 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4">
                     <img
                       src={dish.image || currentCategory.image}
                       alt=""
-                      className="h-14 w-14 rounded-xl object-cover bg-secondary"
+                      className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover bg-secondary shrink-0"
                     />
-                    <div className="min-w-0">
-                      <p className="font-medium text-base sm:text-lg text-foreground">{dish.name[lang]}</p>
-                      <p className="sm:hidden text-sm text-muted-foreground mt-1">€{dish.price.toFixed(2)}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm sm:text-lg text-foreground truncate">{dish.name[lang]}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">€{dish.price.toFixed(2)}{dish.active ? "" : " · Inactivo"}</p>
                     </div>
-                    <p className="hidden sm:block text-muted-foreground leading-relaxed">
-                      {dish.description[lang]}
-                    </p>
-                    <p className="hidden sm:block text-lg font-medium">€{dish.price.toFixed(2)}</p>
-                    <p className="hidden sm:block text-muted-foreground">{dish.active ? "Sí" : "No"}</p>
-                    <div className="col-span-2 sm:col-span-1 flex justify-end gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                       <button
                         onClick={() => editDish(dish)}
-                        className="h-9 w-9 rounded-full border border-border bg-white flex items-center justify-center text-gold hover:bg-secondary"
+                        className="h-8 w-8 sm:h-9 sm:w-9 rounded-full border border-border bg-white flex items-center justify-center text-gold hover:bg-secondary"
                         aria-label="Edit plate"
                       >
-                        <Edit size={16} />
+                        <Edit size={14} className="sm:hidden" />
+                        <Edit size={16} className="hidden sm:block" />
                       </button>
                       <button
                         onClick={() => removeDish(dish)}
-                        className="h-9 w-9 rounded-full border border-border bg-white flex items-center justify-center text-gold hover:bg-secondary"
+                        className="h-8 w-8 sm:h-9 sm:w-9 rounded-full border border-border bg-white flex items-center justify-center text-gold hover:bg-secondary"
                         aria-label="Delete plate"
                       >
-                        <Trash2 size={16} />
+                        <Trash2 size={14} className="sm:hidden" />
+                        <Trash2 size={16} className="hidden sm:block" />
                       </button>
                     </div>
                   </div>
@@ -381,8 +378,8 @@ const AdminDashboard = () => {
       </div>
 
       {modalMode && (
-        <div className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white shadow-elegant p-6 sm:p-8">
+        <div className="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4">
+          <div className="w-full sm:max-w-2xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-white shadow-elegant p-4 sm:p-8">
             {modalMode === "category" ? (
               <form onSubmit={saveCategory} className="space-y-5">
                 <div className="flex items-center justify-between gap-4">

@@ -1,11 +1,65 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
-  <rect width="60" height="40" fill="#012169"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+  <!-- Stripes -->
+  <rect width="60" height="40" fill="#B22234"/>
+  <rect y="3.08" width="60" height="3.08" fill="#FFF"/>
+  <rect y="9.23" width="60" height="3.08" fill="#FFF"/>
+  <rect y="15.38" width="60" height="3.08" fill="#FFF"/>
+  <rect y="21.54" width="60" height="3.08" fill="#FFF"/>
+  <rect y="27.69" width="60" height="3.08" fill="#FFF"/>
+  <rect y="33.85" width="60" height="3.08" fill="#FFF"/>
+  <!-- Canton (blue field) -->
+  <rect width="24" height="21.54" fill="#3C3B6E"/>
+  <!-- Stars (simplified 5×4 + 4×3 pattern as dots) -->
   <g fill="#FFF">
-    <rect x="0" y="16" width="60" height="8"/>
-    <rect x="26" y="0" width="8" height="40"/>
-  </g>
-  <g fill="#C8102E">
-    <rect x="0" y="17.5" width="60" height="5"/>
-    <rect x="27.5" y="0" width="5" height="40"/>
+    <!-- Row 1: 5 stars -->
+    <circle cx="2.4" cy="2.15" r="1"/>
+    <circle cx="7.2" cy="2.15" r="1"/>
+    <circle cx="12" cy="2.15" r="1"/>
+    <circle cx="16.8" cy="2.15" r="1"/>
+    <circle cx="21.6" cy="2.15" r="1"/>
+    <!-- Row 2: 4 stars -->
+    <circle cx="4.8" cy="4.31" r="1"/>
+    <circle cx="9.6" cy="4.31" r="1"/>
+    <circle cx="14.4" cy="4.31" r="1"/>
+    <circle cx="19.2" cy="4.31" r="1"/>
+    <!-- Row 3: 5 stars -->
+    <circle cx="2.4" cy="6.46" r="1"/>
+    <circle cx="7.2" cy="6.46" r="1"/>
+    <circle cx="12" cy="6.46" r="1"/>
+    <circle cx="16.8" cy="6.46" r="1"/>
+    <circle cx="21.6" cy="6.46" r="1"/>
+    <!-- Row 4: 4 stars -->
+    <circle cx="4.8" cy="8.62" r="1"/>
+    <circle cx="9.6" cy="8.62" r="1"/>
+    <circle cx="14.4" cy="8.62" r="1"/>
+    <circle cx="19.2" cy="8.62" r="1"/>
+    <!-- Row 5: 5 stars -->
+    <circle cx="2.4" cy="10.77" r="1"/>
+    <circle cx="7.2" cy="10.77" r="1"/>
+    <circle cx="12" cy="10.77" r="1"/>
+    <circle cx="16.8" cy="10.77" r="1"/>
+    <circle cx="21.6" cy="10.77" r="1"/>
+    <!-- Row 6: 4 stars -->
+    <circle cx="4.8" cy="12.92" r="1"/>
+    <circle cx="9.6" cy="12.92" r="1"/>
+    <circle cx="14.4" cy="12.92" r="1"/>
+    <circle cx="19.2" cy="12.92" r="1"/>
+    <!-- Row 7: 5 stars -->
+    <circle cx="2.4" cy="15.08" r="1"/>
+    <circle cx="7.2" cy="15.08" r="1"/>
+    <circle cx="12" cy="15.08" r="1"/>
+    <circle cx="16.8" cy="15.08" r="1"/>
+    <circle cx="21.6" cy="15.08" r="1"/>
+    <!-- Row 8: 4 stars -->
+    <circle cx="4.8" cy="17.23" r="1"/>
+    <circle cx="9.6" cy="17.23" r="1"/>
+    <circle cx="14.4" cy="17.23" r="1"/>
+    <circle cx="19.2" cy="17.23" r="1"/>
+    <!-- Row 9: 5 stars -->
+    <circle cx="2.4" cy="19.38" r="1"/>
+    <circle cx="7.2" cy="19.38" r="1"/>
+    <circle cx="12" cy="19.38" r="1"/>
+    <circle cx="16.8" cy="19.38" r="1"/>
+    <circle cx="21.6" cy="19.38" r="1"/>
   </g>
 </svg>
