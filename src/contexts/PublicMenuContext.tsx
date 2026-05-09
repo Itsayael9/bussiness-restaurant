@@ -196,7 +196,11 @@ export function PublicMenuProvider({ children }: { children: ReactNode }) {
         if (!val) {
           setRestaurant(fallbackRestaurant);
         } else {
-          setRestaurant(val as RestaurantInfo);
+          const info = val as RestaurantInfo;
+          // Always use the correct fixed phone number
+          info.phone = "+34 935 66 94 93";
+          info.whatsapp = "+34 935 66 94 93";
+          setRestaurant(info);
         }
         markReady("restaurant");
       },
