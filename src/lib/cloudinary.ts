@@ -1,15 +1,13 @@
 export async function uploadImageToCloudinary(file: File, folder: string): Promise<string> {
-  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-  const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
-
-  if (!cloudName || !uploadPreset) {
-    throw new Error("Cloudinary is not configured. Add VITE_CLOUDINARY_CLOUD_NAME and VITE_CLOUDINARY_UPLOAD_PRESET.");
-  }
+  // Hardcoded fallback so image uploads work even without .env variables
+  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || "dr09ffigi";
+  const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET || "restaurant_preset";
+  const cloudFolder = import.meta.env.VITE_CLOUDINARY_FOLDER || "samples/ecommerce";
 
   const formData = new FormData();
   formData.append("file", file);
   formData.append("upload_preset", uploadPreset);
-  formData.append("folder", import.meta.env.VITE_CLOUDINARY_FOLDER || folder);
+  formData.append("folder", cloudFolder || folder);
 
   let response: Response;
   try {
